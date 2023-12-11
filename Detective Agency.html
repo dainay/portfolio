@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daria Iarovaia - Detective Agency</title>
+    <link rel="stylesheet" href="./scroll.css">
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: big;
+        src: url(./fonts/ENGR.TTF);
+      }
+
+      @font-face {
+        font-family: curs;
+        src: url(./fonts/adeptly-font/AdeptlyRegular.ttf);
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
+
+      :root {
+        --blue: #070713;
+        --beige: #ede4e4;
+        --gold: #ab7a41;
+        --black: #1c1b1b;
+      }
+
+      body {
+        background-color: var(--blue);
+        margin: 0;
+        background-image: url("./img/back-photos.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      h1 {
+        color: var(--gold);
+        font-family: big;
+        font-size: 7vw;
+        font-weight: 100;
+        transform: scale(1, 1.2);
+      }
+
+      .top {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .name,
+      .info {
+        padding-left: 5%;
+      }
+
+      .info {
+        color: var(--beige);
+        padding-left: 15%;
+      }
+
+      .info h2 {
+        font-family: curs;
+        font-size: 2.3rem;
+        font-weight: 500;
+        margin: 0;
+        margin-top: 1rem;
+      }
+
+      .info p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+        margin: 0;
+        padding-left: 45px;
+      }
+
+      .project {
+        width: 75%;
+        margin: 100px auto;
+        background-color: var(--beige);
+        padding: 5%;
+        position: relative;
+        border-radius: 10px;
+      }
+
+      .project > h2 {
+        font-family: curs;
+        font-size: 3rem;
+        font-weight: 500;
+      }
+
+      .project > p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+      }
+
+      .description {
+        width: 90%;
+        position: relative;
+        margin: auto;
+      }
+
+      .description > h2 {
+        font-family: curs;
+        font-size: 4rem;
+        color: var(--gold);
+        margin: 0;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+        width: 70%;
+
+        margin: auto;
+        margin-bottom: 15px;
+        max-width: 900px;
+        /* border: red solid; */
+      }
+
+      .button {
+        display: block;
+        padding: 20px 50px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 100;
+        width: 300px;
+        text-align: center;
+        z-index: 1;
+        margin: 60px auto;
+      }
+
+      .button {
+        border-color: var(--gold);
+        color: #fff;
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+      }
+
+      .button:hover {
+        box-shadow: 0 0 20px 0px var(--gold) inset, 0 0 70px 10px var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--gold);
+      }
+
+      .button2 {
+        display: block;
+        padding: 10px 30px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 100;
+        text-align: center;
+        z-index: 1;
+        width: 600px;
+        margin: 60px auto;
+        color: var(--gold);
+        box-shadow: 0 0 50px 0px #ab7a412b inset, 0 0 40px 10px #ab7a411f;
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+      }
+
+      .button2:hover {
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--black);
+      }
+      
+      .img1 {
+        width: 35vw;
+        border-radius: 10px;
+        position: relative;
+        margin-block: 2vw;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+        z-index: 2;
+        transform: rotate(-4deg)
+    
+      }
+
+      .img2 {
+        position: absolute;
+        width: 35vw;
+        border-radius: 10px;
+        z-index: 1;
+        top: 4vw;
+        left: 25vw;
+        transform: rotate(6deg);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+      } 
+
+     .card {
+      box-shadow: 0 0 9px rgba(0, 0, 0, 0.71);
+      position: absolute;
+      z-index: 3;
+      width: 9vw;
+     }
+
+      .photo-wrapper1 {
+        position: relative;
+        width: 100%;
+        padding-top: 6vw;
+        height: 40vw;
+        /* border: blue solid; */
+        margin: auto;
+      }
+
+      .img3 {
+        top: 13vw;
+        transform: rotate(-8deg);
+      }
+
+      .img4 {
+        top: 25vw; 
+        left: 48vw;
+        transform: rotate(20deg);
+      }
+
+      .img5 {
+        top: 23vw; 
+        left: 15vw;
+        transform: rotate(-30deg);
+      }
+
+      .img6 {
+        top: 0vw; 
+        left: 42vw;
+        z-index: 0;
+        transform: rotate(30deg);
+      }
+
+      .img7 {
+        top: 1vw; 
+        left: 17vw;
+        z-index: 0;
+        transform: rotate(-45deg);
+      }
+
+    .prix {
+      font-family: big;
+      color: var(--gold);
+      text-align: center;
+    }
+      
+    #video {
+      display: block;
+      margin: auto;
+      margin-block: 50px;
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div class="name">
+          <h1>Detective <br> Agency</h1>
+        </div>
+
+        <div class="info">
+          <h2>Role</h2>
+          <p>
+            Graphic Design, Video, Conception
+          </p>
+
+          <h2>Technologies</h2>
+          <p>
+            Photoshop, VegasPro
+          </p>
+
+          <h2>Type</h2>
+          <p>Personal project</p>
+
+          <h2>Year</h2>
+          <p>2019-2020 November-January</p>
+
+          
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="description">
+         <h2>Description</h2>
+ 
+          <p class="prix"><b>Prix: 1 place "Best Educational Project"</b></p>
+
+          
+
+          <p>During my work at the Institute of Russian Language and Culture, my two colleagues and I prepared an educational game for our foreign students. The game is designed for level A2 and invites students to take on the role of secret agents helping the world-famous chef Raul find the stolen recipe for his signature cake.</p>
+
+
+
+          <div class="photo-wrapper1">
+           
+            <img class="img img1" src="./img/projects/edu.webp" alt="">
+            <img class="img img2" src="./img/projects/edu2.webp" alt="">
+            <img class="card img3" src="./img/projects/edu13.jpg" alt="">
+            <img class="card img4" src="./img/projects/edu11.jpg" alt="">
+            <img class="card img5" src="./img/projects/edu12.jpg" alt="">
+            <img class="card img6" src="./img/projects/edu14.jpg" alt="">
+            <img class="card img7" src="./img/projects/edu15.jpg" alt="">
+          </div>
+
+          <p>
+            To immerse students in a more immersive environment, I created numerous visual materials for the game. Each student, for example, had a secret agent passport, a personal ID card, as well as various maps, crosswords, audio, and even a video message from our chef.
+
+           
+          </p>
+
+
+          <iframe width="560" id="video" height="315" src="https://www.youtube.com/embed/-F76JKxuQq8?si=gHTjOFZ2Qc4rY7zq"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         
+       <p> After the game, I compiled a video documenting how our experimental game unfolded. This project helped us win the competition for the best Educational Projects at the institute among Russian language teachers.</p>
+        </div>
+      </div>
+
+      <a class="button2" href="index.html"  
+        >Retutn to main page <span></span><span></span><span></span
+        ><span></span>
+      </a>
+    </main>
+  </body>
+
+ 
+</html>

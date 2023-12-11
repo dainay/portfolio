@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daria Iarovaia - Interview</title>
+    <link rel="stylesheet" href="./scroll.css">
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: big;
+        src: url(./fonts/ENGR.TTF);
+      }
+
+      @font-face {
+        font-family: curs;
+        src: url(./fonts/adeptly-font/AdeptlyRegular.ttf);
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
+
+      :root {
+        --blue: #070713;
+        --beige: #ede4e4;
+        --gold: #ab7a41;
+        --black: #1c1b1b;
+      }
+
+      body {
+        background-color: var(--blue);
+        margin: 0;
+        background-image: url("./img/back-photos.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      h1 {
+        color: var(--gold);
+        font-family: big;
+        font-size: 7vw;
+        font-weight: 100;
+        transform: scale(1, 1.2);
+      }
+
+      .top {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .name,
+      .info {
+        padding-left: 5%;
+      }
+
+      .info {
+        color: var(--beige);
+        padding-left: 15%;
+      }
+
+      .info h2 {
+        font-family: curs;
+        font-size: 2.3rem;
+        font-weight: 500;
+        margin: 0;
+        margin-top: 1rem;
+      }
+
+      .info p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+        margin: 0;
+        padding-left: 45px;
+      }
+
+      .project {
+        width: 75%;
+        margin: 100px auto;
+        background-color: var(--beige);
+        padding: 5%;
+        position: relative;
+        border-radius: 10px;
+      }
+
+      .project > h2 {
+        font-family: curs;
+        font-size: 3rem;
+        font-weight: 500;
+      }
+
+      .project > p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+      }
+
+      .description {
+        width: 90%;
+        position: relative;
+        margin: auto;
+      }
+
+      .description > h2 {
+        font-family: curs;
+        font-size: 4rem;
+        color: var(--gold);
+        margin: 0;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+        width: 70%;
+
+        margin: auto;
+        margin-bottom: 15px;
+        max-width: 900px;
+        /* border: red solid; */
+      }
+
+      .button {
+        display: block;
+        padding: 20px 50px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 100;
+        width: 300px;
+        text-align: center;
+        z-index: 1;
+        margin: 60px auto;
+      }
+
+      .button {
+        border-color: var(--gold);
+        color: #fff;
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+      }
+
+      .button:hover {
+        box-shadow: 0 0 20px 0px var(--gold) inset, 0 0 70px 10px var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--gold);
+      }
+
+      .button2 {
+        display: block;
+        padding: 10px 30px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 100;
+        text-align: center;
+        z-index: 1;
+        width: 600px;
+        margin: 60px auto;
+        color: var(--gold);
+        box-shadow: 0 0 50px 0px #ab7a412b inset, 0 0 40px 10px #ab7a411f;
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+      }
+
+      .button2:hover {
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--black);
+      }
+      
+      .img {
+        width: 33vw;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.51);
+      }
+
+      .img1 {
+      
+     
+        position: relative;
+        margin-block: 2vw;
+       top: -3vw;
+        z-index: 2;
+        transform: rotate(-4deg)
+    
+      }
+
+      .img4 {
+        position: absolute;
+  z-index: 0;
+  top: 24vw;
+  left: 28vw;
+  transform: rotate(-4deg);
+      }
+
+     
+.img3 {
+  position: absolute;
+  z-index: 1;
+  top: 26vw;
+  left: 1vw;
+  transform: rotate(4deg);
+}
+
+
+      .img2 {
+        position: absolute;
+       
+        border-radius: 10px;
+        z-index: 1;
+        top: 4vw;
+        left: 25vw;
+        transform: rotate(6deg);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+      } 
+
+     .card {
+      box-shadow: 0 0 9px rgba(0, 0, 0, 0.71);
+      position: absolute;
+      z-index: 3;
+      width: 9vw;
+     }
+
+      .photo-wrapper1 {
+        position: relative;
+        width: 100%;
+        padding-top: 6vw;
+        height: 55vw;
+        /* border: blue solid; */
+        margin: auto;
+      }
+
+     #desc {
+     font-family: curs;
+      position: relative;
+      top: 18vw;
+     font-variant: initial;
+     font-size: 1.6rem;
+     font-weight: 900;
+      color: var(--black);
+      text-align: center;
+
+     }
+ 
+
+    .prix {
+      font-family: big;
+      color: var(--gold);
+      text-align: center;
+    }
+      
+    #video {
+      display: block;
+      margin: auto;
+      margin-block: 50px;
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div class="name">
+          <h1>Interview </h1>
+        </div>
+
+        <div class="info">
+          <h2>Role</h2>
+          <p>
+            Conception, Filming, Light, Montage Video and Animation
+          </p>
+
+          <h2>Technologies</h2>
+          <p>
+            Premier Pro, After Effect
+          </p>
+
+          <h2>Type</h2>
+          <p>Group Educational project</p>
+
+          <h2>Year</h2>
+          <p>2022-2022 November-December</p>
+
+          
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="description">
+         <h2>Description</h2>
+        
+
+          <p>
+            During the first semester, our primary project involved conducting an interview with a theatre professional. For our promotional theme of the semester, we chose "theatre." Our group of 6 students was excited to interview the Public Communication Manager of the Montreux Theater.
+            
+           </p>
+
+
+
+          <div class="photo-wrapper1">
+           
+            <img class="img img1" src="./img/projects/inter1.jpg" alt="">
+            <img class="img img2" src="./img/projects/inter2.jpg" alt="">
+            <img class="img img3" src="./img/projects/inter3.jpg" alt="">
+            <img class="img img4" src="./img/projects/inter4.jpg" alt="">
+             
+            <p id="desc">I took some photos during the set</p>
+          </div>
+
+          <p>
+            Our task was not only to prepare questions and find a professional in the field but also to set up our shooting location, arrange lighting, prepare the camera and sound equipment. Afterward, each group member was responsible for presenting their individual editing.
+           
+          </p>
+
+ 
+          <iframe id="video" width="840" height="472.5" src="https://www.youtube.com/embed/mO2kgLsJXPY?si=unx8jQo7I2IGVjcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <a class="button2" href="index.html"  
+        >Retutn to main page <span></span><span></span><span></span
+        ><span></span>
+      </a>
+    </main>
+  </body>
+
+ 
+</html>

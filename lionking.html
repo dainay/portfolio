@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Lion King</title>
+  <link rel="stylesheet" href="./scroll.css">
+  <style>
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+
+    @font-face {
+      font-family: big;
+      src: url(./fonts/ENGR.TTF);
+    }
+
+    @font-face {
+      font-family: curs;
+      src: url(./fonts/adeptly-font/AdeptlyRegular.ttf);
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
+
+    :root {
+      --blue: #070713;
+      --beige: #ede4e4;
+      --gold: #ab7a41;
+      --black: #1c1b1b;
+    }
+
+    body {
+      background-color: var(--blue);
+      margin: 0;
+      background-image: url("./img/back-photos.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    h1 {
+      color: var(--gold);
+      font-family: big;
+      font-size: 7vw;
+      font-weight: 100;
+      transform: scale(1, 1.2);
+    }
+
+    .top {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .name,
+    .info {
+      
+      padding-left: 5%;
+    }
+
+    .info {
+      color: var(--beige);
+      padding-left: 15%;
+    }
+
+    .info h2 {
+      font-family: curs;
+      font-size: 2.3rem;
+      font-weight: 500;
+      margin: 0;
+      margin-top: 1rem;
+    }
+
+    .info p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      font-variant: small-caps;
+      font-weight: 100;
+      margin: 0;
+      padding-left: 45px;
+    }
+
+    .project {
+      width: 90%;
+      margin: 100px auto;
+      background-color: var(--beige);
+      padding: 5%;
+      border-radius: 10px;
+    }
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      position: relative;
+     
+      flex-wrap: nowrap;
+    }
+
+    @media (max-width: 1500px) {
+      .wrapper {
+        flex-wrap: wrap;
+      }
+      .visual {
+      top: 20px !important;
+    }
+  }
+
+    .project>h2 {
+      font-family: curs;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin: 0;
+      margin-bottom: 2rem;
+      
+
+    }
+
+    .project>p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      font-variant: small-caps;
+      font-weight: 100;
+    }
+
+    .description {
+
+      position: relative;
+      padding-right: 5%;
+
+    }
+
+
+
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      font-variant: small-caps;
+      font-weight: 100;
+    }
+
+    .visual {
+      padding: 30px;
+      position: relative;
+     
+      top: -50px;
+      
+
+    }
+
+    .img2 {
+      width: 90%;
+      border-radius: 20px;
+      position: relative;
+      left: 100px;
+      top: -100px;
+      z-index: 1;
+
+      filter: drop-shadow(5px 5px 10px #1f1f1f91);
+    }
+
+
+    .img1 {
+      width: 90%;
+      border-radius: 20px;
+      z-index: 2;
+      position: relative;
+      filter: drop-shadow(5px 5px 10px #1f1f1f91);
+    }
+
+    .button {
+      display: block;
+      padding: 20px 50px;
+      border-radius: 3px;
+      font-family: big;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 100;
+      width: 300px;
+      text-align: center;
+      z-index: 1;
+      margin: 60px auto;
+
+    }
+
+    .button {
+      border-color: var(--gold);
+      color: #fff;
+      box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+      transition: all 900ms ease-in-out;
+      border-radius: 0;
+      margin: 0px auto;
+    }
+
+    .button:hover {
+      box-shadow: 0 0 20px 0px var(--gold) inset, 0 0 70px 10px var(--gold);
+      border: none;
+      border-radius: 25px;
+      color: var(--gold);
+    }
+
+    .button2 {
+      display: block;
+      padding: 10px 30px;
+      border-radius: 3px;
+      font-family: big;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 100;
+      text-align: center;
+      z-index: 1;
+      width: 600px;
+      margin: 60px auto;
+      color: var(--gold);
+      box-shadow: 0 0 50px 0px #ab7a412b inset, 0 0 40px 10px #ab7a411f;
+      transition: all 900ms ease-in-out;
+      border-radius: 0;
+    }
+
+
+    .button2:hover {
+      box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+      border: none;
+      border-radius: 25px;
+      color: var(--black);
+    }
+
+
+
+
+    div#comparison { 
+      border-radius: 15px;
+  width: 800px;
+  height: 550px;
+  max-width: 700px;
+  overflow: hidden; }
+div#comparison figure { 
+  background-image: url(img/projects/lionking1.jpg); 
+  background-size: cover;
+  position: relative;
+  font-size: 0;
+  width: 100%; 
+  height: 100%;
+  margin: 0; 
+}
+div#comparison figure > img { 
+  position: relative;
+  width: 100%;
+}
+div#comparison figure div { 
+  background-image: url(./img/projects/lionking4.jpg);
+  background-size: cover;
+  position: absolute;
+  width: 50%; 
+  box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+  overflow: hidden;
+  bottom: 0;
+  height: 100%;
+}
+
+input[type=range]{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  position: relative;
+  top: -2rem; left: -2%;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 102%; 
+}
+input[type=range]:focus { 
+  outline: none; 
+  cursor: pointer;
+}
+input[type=range]:active { 
+  outline: none;  
+}
+
+input[type=range]::-moz-range-track { 
+  -moz-appearance:none;
+    height:15px;
+    width: 98%;
+    background-color: rgba(255, 255, 255, 0.1); 
+    position: relative;
+    outline: none;    
+ }
+input[type=range]::active { 
+  border: none; 
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    width: 20px; height: 15px;   
+    background: var(--gold);
+    border-radius: 10px;
+   }
+input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 20px;
+  height: 15px;
+  background: var(--gold);
+    border-radius: 10px;
+     }   
+input[type=range]:focus::-webkit-slider-thumb {
+   cursor: grabbing;
+   }
+ 
+
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="top">
+      <div class="name">
+        <h1>Lion King</h1>
+      </div>
+
+      <div class="info">
+        <h2>Role</h2>
+        <p>Conception, Design, UI</p>
+
+        <h2>Technologies</h2>
+        <p>Photoshop, Figma</p>
+
+        <h2>Type</h2>
+          <p>Educational project</p>
+
+        <h2>Year</h2>
+        <p>2022 April</p>
+      </div>
+    </div>
+
+
+
+    <div class="project">
+
+      <h2 class="h2-desc">Description</h2>
+
+      <div class="wrapper">
+        <div class="description">
+
+          <p>The main goal of this assignment was to redesign a well-known website in such a way as to replace the graphical universe of the site with a completely opposite one. For this task, we initially recreated the layout of the current website in Figma, then analyzed its UI. Afterward, we were required to propose a mood board suggesting a design that would have no connections with the original version.</p>
+
+          <p>For this assignment, I chose the website of the musical "The Lion King," which I love. The universe of the old website is very strict, limited to three colors, and characterized by strict lines, which I replaced with color and shapeless patterns.</p>
+         
+        </div>
+        <div class="visual">
+
+
+          <div id="comparison">
+            <figure>
+              <div id="divisor"></div>
+            </figure>
+            <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+          </div>
+          
+        
+        
+        </div>
+
+
+      </div>
+      <a class="button" href="https://www.figma.com/file/GOcmN2Aiat69pR1Ku8I1Fo/Daria---Roi-lion?type=design&node-id=253%3A582&mode=design&t=FKLjrSPGpEjL9I9x-1">Watch the project <span></span><span></span><span></span><span></span>
+      </a>
+    </div>
+
+    <a class="button2" href="index.html">Retutn to main page <span></span><span></span><span></span><span></span>
+    </a>
+
+  </main>
+</body>
+<script>
+  var divisor = document.getElementById("divisor"),
+slider = document.getElementById("slider");
+function moveDivisor() { 
+	divisor.style.width = slider.value+"%";
+}
+</script>
+
+</html>

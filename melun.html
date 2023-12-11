@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daria Iarovaia - Tourist Campaign</title>
+    <link rel="stylesheet" href="./scroll.css" />
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: big;
+        src: url(./fonts/ENGR.TTF);
+      }
+
+      @font-face {
+        font-family: curs;
+        src: url(./fonts/adeptly-font/AdeptlyRegular.ttf);
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
+
+      :root {
+        --blue: #070713;
+        --beige: #ede4e4;
+        --gold: #ab7a41;
+        --black: #1c1b1b;
+      }
+
+      body {
+        background-color: var(--blue);
+        margin: 0;
+        background-image: url("./img/back-photos.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      h1 {
+        color: var(--gold);
+        font-family: big;
+        font-size: 7vw;
+        font-weight: 100;
+        transform: scale(1, 1.2);
+      }
+
+      .top {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .name,
+      .info {
+        padding-left: 5%;
+      }
+
+      .info {
+        color: var(--beige);
+        padding-left: 15%;
+      }
+
+      .info h2 {
+        font-family: curs;
+        font-size: 2.3rem;
+        font-weight: 500;
+        margin: 0;
+        margin-top: 1rem;
+      }
+
+      .info p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+        margin: 0;
+        padding-left: 45px;
+      }
+
+      .project {
+        width: 75%;
+        margin: 100px auto;
+        background-color: var(--beige);
+        padding: 5%;
+        position: relative;
+        border-radius: 10px;
+      }
+
+      .project > h2 {
+        font-family: curs;
+        font-size: 3rem;
+        font-weight: 500;
+      }
+
+      .project > p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+      }
+
+      .description {
+        width: 90%;
+        position: relative;
+        margin: auto;
+      }
+
+      .description > h2 {
+        font-family: curs;
+        font-size: 4rem;
+        color: var(--gold);
+        margin: 0;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+        width: 70%;
+
+        margin: auto;
+        margin-bottom: 15px;
+        max-width: 900px;
+        /* border: red solid; */
+      }
+
+      .button {
+        display: block;
+        padding: 20px 50px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 100;
+        width: 400px;
+        text-align: center;
+        z-index: 1;
+        margin: 60px auto;
+      }
+
+      .button {
+        border-color: var(--gold);
+        color: #fff;
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+      }
+
+      .button:hover {
+        box-shadow: 0 0 20px 0px var(--gold) inset, 0 0 70px 10px var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--gold);
+      }
+
+      .button2 {
+        display: block;
+        padding: 10px 30px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 100;
+        text-align: center;
+        z-index: 1;
+        width: 600px;
+        margin: 60px auto;
+        color: var(--gold);
+        box-shadow: 0 0 50px 0px #ab7a412b inset, 0 0 40px 10px #ab7a411f;
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+      }
+
+      .button2:hover {
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--black);
+      }
+      .img1 {
+        width: 90%;
+        border-radius: 5px;
+        z-index: 4;
+        position: relative;
+        margin-block: 2vw;
+        filter: drop-shadow(5px 5px 5px #1f1f1f52);
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      .photo-wrapper1 {
+        position: relative;
+        width: 100%;
+        /* height: 31vw; */
+        /* border: blue solid; */
+        margin: auto;
+      }
+
+      .photo-wrapper2 {
+        border-radius: 5px;
+        width: 35.1vw;
+        margin: auto;
+        height: 26vw;
+        overflow-y: scroll;
+        margin-block-end: 50px;
+        cursor: url("./img/icons/scroll.svg"), auto;
+     
+      }
+
+      .img2 {
+        width: 100%;
+        z-index: 2;
+        position: relative;
+      }
+
+      .img3 {
+        position: absolute;
+        width: 37vw;
+        z-index: 1;
+        left: 50%;
+        transform: translate(-50%, 0);
+         filter: drop-shadow(5px 5px 5px #1f1f1f52);
+      
+      top: 56.8vw;
+      }
+
+      .logo {
+        width: 60px;
+        display: block;
+        margin: auto;
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div class="name">
+          <h1>
+            Tourist <br />
+            Campaign
+          </h1>
+        </div>
+
+        <div class="info">
+          <h2>Role</h2>
+          <p>Graphic Design, UI, Branding</p>
+
+          <h2>Technologies</h2>
+          <p>Photoshop, Illustrator, Figma</p>
+
+          <h2>Type</h2>
+          <p>Group Educational project</p>
+
+          <h2>Year</h2>
+          <p>2023 September-October</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="description">
+          <div class="logo">
+            <svg
+              width="100%"
+              height="auto"
+              viewBox="0 0 322 417"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  opacity="0.99"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M154.393 -0.13501C154.663 -0.13501 154.932 -0.13501 155.202 -0.13501C155.202 60.1432 155.202 120.422 155.202 180.7C141.538 180.7 127.874 180.7 114.21 180.7C114.255 147.862 114.21 115.023 114.075 82.1854C102.521 96.3072 91.149 110.522 79.9607 124.83C64.2652 106.64 48.6685 88.2871 33.1709 69.7698C32.994 112.362 33.1289 154.917 33.5755 197.434C125.087 197.389 216.6 197.434 308.111 197.569C312.119 205.993 316.029 214.494 319.843 223.075C320.387 224.349 321.062 225.519 321.865 226.583C321.865 226.943 321.865 227.303 321.865 227.663C217.948 227.663 114.03 227.663 10.1131 227.663C10.2172 165.315 10.2621 102.968 10.248 40.6203C9.81439 39.7372 9.27502 38.9275 8.62989 38.1912C5.69929 34.8247 2.77774 31.496 -0.134766 28.2048C-0.134766 27.845 -0.134766 27.485 -0.134766 27.1252C0.461512 26.9991 1.00088 26.7293 1.48332 26.3155C2.20521 25.7277 2.87941 25.0979 3.50594 24.4262C3.59582 24.5161 3.68573 24.6061 3.77562 24.6961C13.3579 17.2848 23.1114 9.86244 33.0361 2.42907C33.4978 1.9565 34.0371 1.77656 34.6542 1.88926C54.0079 25.8047 73.425 49.6912 92.9054 73.5485C113.45 49.0958 133.946 24.5346 154.393 -0.13501Z"
+                  fill="#67BEC5"
+                />
+                <path
+                  opacity="0.991"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M199.16 10.9312C235.118 10.8862 271.076 10.9312 307.033 11.0661C307.249 11.9024 307.429 12.7571 307.572 13.6302C307.308 19.2009 307.219 24.7789 307.303 30.3642C284.469 30.3642 261.637 30.3642 238.803 30.3642C238.803 47.7279 238.803 65.0918 238.803 82.4554C257.322 82.4104 275.839 82.4554 294.358 82.5904C296.081 88.9968 297.699 95.4294 299.212 101.888C279.075 101.888 258.94 101.888 238.803 101.888C238.803 121.411 238.803 140.935 238.803 160.457C262.715 160.457 286.626 160.457 310.539 160.457C310.539 167.115 310.539 173.773 310.539 180.43C273.412 180.43 236.286 180.43 199.16 180.43C199.16 123.931 199.16 67.4308 199.16 10.9312Z"
+                  fill="#67BEC5"
+                />
+                <path
+                  opacity="0.989"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M211.565 240.618C211.925 240.618 212.284 240.618 212.644 240.618C212.864 241.606 213.448 242.326 214.397 242.778C217.641 246.563 220.877 250.342 224.105 254.114C227.548 257.558 230.784 261.156 233.814 264.91C237.167 268.264 240.313 271.773 243.253 275.436C246.409 278.775 249.555 282.102 252.692 285.422C252.781 285.692 252.872 285.962 252.961 286.232C256.292 289.565 259.438 293.074 262.4 296.758C265.646 300.186 268.882 303.606 272.109 307.015C275.445 310.893 278.77 314.761 282.087 318.62C285.631 322.305 289.047 326.083 292.335 329.956C292.47 300.988 292.516 272.016 292.47 243.048C299.031 243.048 305.595 243.048 312.156 243.048C312.156 298.197 312.156 353.349 312.156 408.498C311.8 408.544 311.485 408.455 311.213 408.228C291.458 385.578 271.502 363.084 251.343 340.752C245.833 334.026 240.08 327.549 234.084 321.319C228.72 314.888 223.236 308.591 217.633 302.426C217.588 335.713 217.453 369.003 217.228 402.29C210.85 403.591 204.558 404.941 198.351 406.339C198.126 354.968 197.991 303.595 197.946 252.224C197.512 251.16 196.793 250.35 195.789 249.795C194.392 248.306 193.088 246.732 191.878 245.072C198.492 243.641 205.054 242.157 211.565 240.618Z"
+                  fill="#67BEC5"
+                />
+                <path
+                  opacity="0.987"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M91.5567 416.865C84.0057 416.865 76.4546 416.865 68.9035 416.865C65.4073 416.295 61.9015 415.891 58.3859 415.65C55.3886 415.27 52.4669 414.595 49.6212 413.626C49.5096 413.75 49.3747 413.839 49.2167 413.896C46.9287 413.016 44.6364 412.206 42.3398 411.467C31.8204 408.19 23.2803 401.802 16.7201 392.304C12.4509 385.073 10.1137 377.246 9.70834 368.822C9.5735 326.806 9.52854 284.793 9.5735 242.778C18.5629 242.778 27.5524 242.778 36.5417 242.778C36.6819 287.004 36.9964 331.268 37.4856 375.57C38.6589 383.772 42.839 389.891 50.0258 393.923C57.8792 397.796 66.1495 399.192 74.8365 398.107C82.3433 397.319 88.9956 394.709 94.7929 390.28C100.227 384.792 102.924 378.134 102.883 370.307C102.614 327.805 102.524 285.295 102.614 242.778C118.884 242.778 135.155 242.778 151.426 242.778C151.471 284.882 151.426 326.987 151.291 369.092C149.473 386.598 141.113 399.283 126.211 407.148C124.827 407.918 123.433 408.727 122.031 409.578C121.873 409.521 121.738 409.432 121.626 409.308C121.019 409.815 120.345 410.22 119.604 410.522C117.471 411.103 115.403 411.866 113.401 412.816C110.609 413.413 107.778 414.134 104.906 414.976C104.659 414.665 104.435 414.708 104.232 415.111C99.9697 415.467 95.7446 416.053 91.5567 416.865Z"
+                  fill="#67BEC5"
+                />
+              </g>
+            </svg>
+          </div>
+          <p>
+            As part of this project, we were tasked with creating an advertising
+            campaign for one of the cities where one of the two students of the
+            group resides. To showcase the city, we needed to develop a poster,
+            advertising banners, and a layout for a responsive website (desktop,
+            tablet, and phone) based on the mood board. Also our misson was to
+            create potentially interactive map of this plase which we could
+            place on our site.
+          </p>
+
+          <p>
+            My teammate and I chose Melun for our project. Our concept revolved
+            around portraying Melen not only as an administrative center but
+            also as a cultural hub with a rich history and beautiful scenery.
+          </p>
+
+          <div class="photo-wrapper1">
+            <img class="img1" src="./img/projects/melun1.jpg" alt="" />
+          </div>
+
+          <p>
+            For the posters, we selected the slogan "Rendew-vous avec ..." to
+            highlight various aspects of the city. I decided to prepare five
+            posters, each featuring one letter from the city's name, along with
+            mockups. Additionally, I proposed a new logo for the city.
+          </p>
+          <p style="margin-bottom: 50px;">
+            Following this, we prepared a layout for a potential website that
+            reflected our advertising campaign.
+          </p>
+
+          <div class="photo-wrapper2">
+            <img class="img2" src="./img/projects/melun3.jpg" alt="" />
+            <img class="img3" src="./img/projects/tablette.png" alt="" />
+          </div>
+
+          <p>
+            For representation the brand's visual identity, I created a brand
+            book. I modernized the logo and produced several posters and banners
+            to enhance communication.
+          </p>
+
+          <a class="button" href="./docs/melun.pdf" target="_blank"
+            >Download <br />
+            the Book <span></span><span></span><span></span><span></span>
+          </a>
+        </div>
+      </div>
+
+      <a class="button2" href="index.html"
+        >Retutn to main page <span></span><span></span><span></span
+        ><span></span>
+      </a>
+    </main>
+  </body>
+
+  <script>
+    function showImg2() {
+      var img2 = document.querySelector(".img2");
+      img2.style.display = "block";
+    }
+
+    function hideImg2() {
+      var img2 = document.querySelector(".img2");
+      img2.style.display = "none";
+    }
+  </script>
+</html>

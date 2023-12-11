@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Magazin</title>
+    <link rel="stylesheet" href="./scroll.css">
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: big;
+        src: url(./fonts/ENGR.TTF);
+      }
+
+      @font-face {
+        font-family: curs;
+        src: url(./fonts/adeptly-font/AdeptlyRegular.ttf);
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
+
+      :root {
+        --blue: #070713;
+        --beige: #ede4e4;
+        --gold: #ab7a41;
+        --black: #1c1b1b;
+      }
+
+      body {
+        background-color: var(--blue);
+        margin: 0;
+        background-image: url("./img/back-photos.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      h1 {
+        color: var(--gold);
+        font-family: big;
+        font-size: 7vw;
+        font-weight: 100;
+        transform: scale(1, 1.2);
+      }
+
+      .top {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .name,
+    .info {
+      
+      padding-left: 5%;
+    }
+
+      .info {
+        color: var(--beige);
+        padding-left: 15%;
+      }
+
+      .info h2 {
+        font-family: curs;
+        font-size: 2.3rem;
+        font-weight: 500;
+        margin: 0;
+        margin-top: 1rem;
+      }
+
+      .info p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+        margin: 0;
+        padding-left: 45px;
+      }
+
+      .project {
+        width: 90%;
+        margin: 100px auto;
+        display: flex;
+        background-color: var(--beige);
+        padding: 5%;
+        position: relative;
+        border-radius: 10px;
+        flex-direction: column;
+      }
+
+      .project > h2 {
+        font-family: curs;
+        font-size: 3rem;
+        font-weight: 500;
+      }
+
+      .project > p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+      }
+
+      .description {
+        width: 70%;
+        position: relative;
+        padding-right: 5%;
+        margin: auto;
+      }
+
+      .description > h2 {
+        font-family: curs;
+        font-size: 4rem;
+        color: var(--gold);
+        margin: 0;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+      }
+
+      .visual {
+        padding: 30px;
+        position: relative;
+        min-height: 74vw;
+      }
+
+      .img1 {
+        width: 87%;
+        border-radius: 20px;
+        position: absolute;
+        filter: drop-shadow(5px 5px 10px #1f1f1f91);
+      }
+
+      .page1 {
+        z-index: 2;
+        transform: rotate(10deg);
+        left: 8vw;
+        top: 8vw;
+      }
+
+      .page2 {
+        z-index: 3;
+        transform: rotate(-15deg);
+        top: 15vw;
+        left: 5vw;
+      }
+
+      .page3 {
+        transform: rotate(-5deg);
+        z-index: 1;
+      }
+
+      .button {
+        display: block;
+        padding: 20px 50px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 100;
+        width: 300px;
+        text-align: center;
+        z-index: 1;
+        margin: 60px auto;
+      }
+
+      .button2 {
+        display: block;
+        padding: 10px 30px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 100;
+        text-align: center;
+        z-index: 1;
+        width: 600px;
+        margin: 60px auto;
+        color: var(--gold);
+        box-shadow: 0 0 50px 0px #ab7a412b inset, 0 0 40px 10px #ab7a411f;
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+      }
+
+
+      .button2:hover {
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--black);
+      }
+
+      .button {
+        border-color: var(--gold);
+        color: #fff;
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+      }
+
+      .button:hover {
+        box-shadow: 0 0 20px 0px var(--gold) inset, 0 0 70px 10px var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--gold);
+      }
+
+      .secondblock {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        gap: 2vw;
+        justify-content: center;
+      }
+
+      .secondtext {
+        width: 40%;
+      }
+
+      .secondvisual {
+        width: 40%;
+      }
+
+      .img2 {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div class="name">
+          <h1>City Journal</h1>
+        </div>
+
+        <div class="info">
+          <h2>Role</h2>
+          <p>Conception, Design, Writting</p>
+
+          <h2>Technologies</h2>
+          <p>InDesgin, Photoshop, Photgraphy, Illustrator</p>
+
+          <h2>Type</h2>
+          <p>Educational project</p>
+
+          <h2>Year</h2>
+          <p>2022 Ocotber-November</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="description">
+          <h2>Description</h2>
+          <p>
+            The project dedicated to creating a magazine about my quartier was
+            one of the largest in the first semester. Our task was to fully
+            develop an authentic issue of a local newspaper focusing on the life
+            of the quartier. My magazine told the story of life in the Melun
+            City Center. For the concept, I decided to create a special edition
+            of a local newspaper that would provide additional coverage of each
+            quartier from a tourist perspective.
+          </p>
+        </div>
+
+        <div class="visual">
+          <img class="img1 page1" src="./img/projects/journal1.jpg" alt="" />
+          <img class="img1 page2" src="./img/projects/journal2.jpg" alt="" />
+          <img class="img1 page3" src="./img/projects/journal3.jpg" alt="" />
+        
+        
+        </div>
+        
+        <div class="secondblock">
+
+          <div class="secondtext">
+            <p>
+              The majority of the project time was spent on writing the texts.
+              One of the mandatory conditions for this project was to conduct
+              interviews with one of the several residents. I was fortunate to
+              speak with two residents - the owner of a local store and also a
+              colleague from the tourist office. There weren't many quality
+              photo materials available online with Melun, so I had to take on
+              the role of a photographer. For example, one of my photos is on
+              the cover of the magazine.
+            </p>
+
+          
+          </div>
+       
+        <div class="secondvisual">
+          <p>
+            The main layout was done in InDesign. I had to prepare two
+            versions - one for the screen with 100 PPI and one for printing
+            with 300 PPI containgin the special marks for the printing house.
+            I also used InDesign to work with vector images and Photoshop for
+            photo processing.
+          </p>
+          <p>
+            This project was quite challenging due to tight deadlines.
+            However, it allowed me to delve into the details of print design
+            and master the Adobe Suite at a higher level.
+          </p>
+        </div>
+      </div>
+      <a class="button" href="#"
+      >Watch the project <span></span><span></span><span></span><span></span>
+    </a>
+      </div>
+      <a class="button2" href="index.html"
+        >Retutn to main page <span></span><span></span><span></span><span></span>
+      </a>
+    </main>
+  </body>
+</html>

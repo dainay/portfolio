@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scroll.css">
+    <title>Daria Iarovaia -Giftbox</title>
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: big;
+        src: url(./fonts/ENGR.TTF);
+      }
+
+      @font-face {
+        font-family: curs;
+        src: url(./fonts/adeptly-font/AdeptlyRegular.ttf);
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
+
+      :root {
+        --blue: #070713;
+        --beige: #ede4e4;
+        --gold: #ab7a41;
+        --black: #1c1b1b;
+      }
+
+      body {
+        background-color: var(--blue);
+        margin: 0;
+        background-image: url("./img/back-photos.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      h1 {
+        color: var(--gold);
+        font-family: big;
+        font-size: 7vw;
+        font-weight: 100;
+        transform: scale(1, 1.2);
+      }
+
+      .top {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .name,
+    .info {
+      
+      padding-left: 5%;
+    }
+
+      .info {
+        color: var(--beige);
+        padding-left: 15%;
+      }
+
+      .info h2 {
+        font-family: curs;
+        font-size: 2.3rem;
+        font-weight: 500;
+        margin: 0;
+        margin-top: 1rem;
+      }
+
+      .info p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+        margin: 0;
+        padding-left: 45px;
+      }
+
+      .project {
+        width: 90%;
+        margin: 100px auto;
+        display: flex;
+        background-color: var(--beige);
+        padding: 5%;
+        position: relative;
+        border-radius: 10px;
+      }
+
+      .project > h2 {
+        font-family: curs;
+        font-size: 3rem;
+        font-weight: 500;
+      }
+
+      .project > p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+      }
+
+      .description {
+        width: 90%;
+        position: relative;
+        padding-right: 5%;
+     
+      }
+
+      .description > h2 {
+        font-family: curs;
+        font-size: 4rem;
+        color: var(--gold);
+        margin: 0;
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+      }
+
+      .visual {
+        padding: 30px;
+         
+      }
+
+      .img1 {
+        width: 100%;
+        border-radius: 20px;
+        
+        filter: drop-shadow(5px 5px 10px #1f1f1f91);
+      }
+
+      .button {
+        display: block;
+        padding: 20px 50px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 100;
+        width: 300px;
+        text-align: center;
+        z-index: 1;
+        margin: 60px auto  ;
+ 
+      }
+
+      .button {
+        border-color: var(--gold);
+        color: #fff;
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+      }
+
+      .button:hover {
+        box-shadow: 0 0 20px 0px var(--gold) inset, 0 0 70px 10px var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--gold);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div class="name">
+          <h1>GiftBox </h1>
+        </div>
+
+        <div class="info">
+          <h2>Role</h2>
+          <p>Conception, Realisation</p>
+
+          <h2>Technologies</h2>
+          <p>Photoshop</p>
+
+          <h2>Type</h2>
+          <p>Educational project</p>
+
+          <h2>Year</h2>
+          <p>2022 October</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="description">
+          <h2>Description</h2>
+          <p>The aim of this project was to learn how to create GIF animations in Photoshop, which could serve as banners on websites. To achieve this, it was necessary to come up with any advertising campaign and then create a storyboard.</p>
+
+            <p>For this task, I chose an advertisement for a fictional online store that offers to find a gift for anyone on your behalf. The most challenging aspect of the project was the 5 MB limit for the final file. You can see the result on the right.</p>
+           
+        </div>
+        <div class="visual">
+          <img class="img1" src="./img/projects/Big-format.gif" alt="" />
+        </div>
+
+      </div>
+        <!-- <a class="button" href="#"
+            >Watch the project <span></span><span></span><span></span
+            ><span></span>
+          </a> -->
+      
+    </main>
+  </body>
+</html>
