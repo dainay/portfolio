@@ -692,7 +692,7 @@ SKILLS */
   color: var(--gold);
 }
 
-#cards {
+.cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -703,7 +703,7 @@ SKILLS */
   justify-content: center;
 }
 
-#cards:before {
+.cards:before {
   content: " ";
   display: block;
   position: absolute;
@@ -713,7 +713,7 @@ SKILLS */
   height: 100%;
 }
 
-#cards:hover > .card::after {
+.cards:hover > .card::after {
   opacity: 1;
   background-color: #dddddd07;
   border-radius: 10px;
@@ -761,8 +761,9 @@ SKILLS */
   width: 100%;
   position: relative;
   z-index: 2;
-
+  border-radius: 10px;
   overflow: hidden;
+   
 }
 
 .card:hover .card-content {
@@ -773,19 +774,26 @@ SKILLS */
   opacity: 1;
   position: absolute;
   top: 0;
-  width: 110%;
+  width: 105%;
   z-index: -1;
   transition: all ease 1s;
   overflow: visible !important;
+  filter: contrast(115%);
+  border-radius: 15px;
+  opacity: 70%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .card:hover img {
   transition: all ease 0.3s;
   top: -100px;
+  transform: translate(-65%, 0);
   scale: 0.75;
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
   overflow: visible !important;
   filter: brightness(55%);
+  opacity: 1;
 }
 
 .card-content h3 {
@@ -797,6 +805,7 @@ SKILLS */
   width: 90%;
   margin-left: 15px;
   margin-bottom: 25px;
+  text-shadow: #1c1b1b 0 0 15px;
 }
 
 .card:hover h3 {
@@ -809,6 +818,7 @@ SKILLS */
 .card:hover .wrapper-card-info p {
   opacity: 1;
   transition: all ease 3s;
+  text-shadow: #1c1b1b 0 0 15px;
 }
 
 .wrapper-card-info p:not(.type) {
@@ -821,18 +831,25 @@ SKILLS */
   font-size: 1rem;
 }
 
+.type-wrapper {
+  display: flex;
+  justify-content: start;
+}
+
 .type {
-  border: rgb(46, 46, 46) 1px solid;
+box-shadow: #1c1b1b 0 0 15px;
   border-radius: 40px;
-  background-color: #6c5c3e;
+  background-color: var(--gold);
   display: block;
   width: fit-content;
   padding: 5px;
   font-size: 0.6rem;
   font-family: Arial, Helvetica, sans-serif;
   font-variant: small-caps;
-  margin: 0 10px;
-  margin-left: 40px;
+  margin: 0 5px;
+  
+  min-width: 50px;
+  text-align: center;
 }
 
 .wrapper-card-info {

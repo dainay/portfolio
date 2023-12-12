@@ -135,13 +135,14 @@
         padding: 30px;
         position: relative;
         height: 47vw;
+        margin-top: 50px;
       }
 
       .img1 {
         display: block;
         position: absolute;
         width: 31vw;
-        left: 6vw;
+        left: 0vw;
         border-radius: 5px;
         background-color: #1c1b1b;
         z-index: 2;
@@ -150,30 +151,38 @@
         cursor:pointer;
       }
 
-      .img1:hover {
-        z-index: 2;
-        
-      }
-
-      .img1:hover .img2{
-        z-index: 1;
-      }
+      
+ 
       .img2:hover {
         z-index: 2;
       }
 
-      .img2:hover .img1{
-        z-index: 1;
-      }
-
-
+       
+.img3:hover {
+  z-index: 2;
+}
 
       .img2 {
         display: block;
         position: absolute;
         z-index: 1;
         width: 31vw;
-        right: 6vw;
+       left: 15vw;
+       top: -0.6vw;
+        border-radius: 5px;
+        background-color: #1c1b1b;
+        filter: drop-shadow(5px 5px 10px #1f1f1fc1);
+        transform: rotate(1deg);
+        cursor:pointer;
+      }
+
+
+      .img3 {
+        display: block;
+        position: absolute;
+        z-index: 0;
+        width: 31vw;
+       left: 28vw;
         border-radius: 5px;
         background-color: #1c1b1b;
         filter: drop-shadow(5px 5px 10px #1f1f1fc1);
@@ -263,16 +272,17 @@
       <div class="project">
         <div class="description">
           <h2>Description</h2>
-          <p>As part of my Artistic Culture course, students in my year were tasked with designing a poster for the Festival des Arts Forestiers 2023. Mandatory requirements included incorporating the event's logo, section titles, and logos of event partners.</p>
+          <p>As part of my Artistic Culture course, students in my year were tasked with designing a poster for the Festival des Arts Forestiers 2023. Mandatory requirements included incorporating the event's logo, section titles, and logos of event partners. The theme of this year revolved around the interconnectedness of human roots and nature's trees.</p>
 
-<p>Out of all the submissions, my poster was selected for presentation at the festival.</p>
+<p>I proposed to affiches for this frstivale. One of my posters (right one) was selected by organisators for presentation at the festival.</p>
 
 <p>Additionally, I was asked to prepare a poster for the second-year MMI graduation ceremony.</p>
 
         </div>
         <div class="visual">
           <img class="img1" src="./img/projects/arts2.jpg" alt="" />
-          <img class="img2" src="./img/projects/affiche MMI.jpg" alt="" />
+          <img class="img2" src="./img/projects/arts1.jpg" alt="" />
+          <img class="img3" src="./img/projects/affiche MMI.jpg" alt="" />
         </div>
       </div>
 
