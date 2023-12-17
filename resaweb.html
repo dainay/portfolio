@@ -1,324 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ResaWeb</title>
-    <link rel="stylesheet" href="./scroll.css">
-    <style>
-      *,
-      *:before,
-      *:after {
-        box-sizing: border-box;
-      }
 
-      @font-face {
-        font-family: big;
-        src: url(./fonts/ENGR.TTF);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daria Iarovaia - LenScape</title>
+  <link rel="stylesheet" href="./scroll.css">
+  <link rel="stylesheet" href="./mobile-projects.css">
+  <style>
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
 
-      @font-face {
-        font-family: curs;
-        src: url(./fonts/adeptly-font/AdeptlyRegular.ttf);
-      }
+    @font-face {
+      font-family: big;
+      src: url(./fonts/ENGR.TTF);
+    }
 
-      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
+    @font-face {
+      font-family: curs;
+      src: url(./fonts/adeptly-font/AdeptlyRegular.ttf);
+    }
 
-      :root {
-        --blue: #070713;
-        --beige: #ede4e4;
-        --gold: #ab7a41;
-        --black: #1c1b1b;
-      }
+    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
 
-      body {
-        background-color: var(--blue);
-        margin: 0;
-        background-image: url("./img/back-photos.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-      }
+    :root {
+      --blue: #070713;
+      --beige: #ede4e4;
+      --gold: #ab7a41;
+      --black: #1c1b1b;
+    }
 
-      h1 {
-        color: var(--gold);
-        font-family: big;
-        font-size: 7vw;
-        font-weight: 100;
-        transform: scale(1, 1.2);
-      }
+    body {
+      background-color: var(--blue);
+      margin: 0;
+      background-image: url("./img/back-photos.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
 
-      .top {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    h1 {
+      color: var(--gold);
+      font-family: big;
+      font-size: 7vw;
+      font-weight: 100;
+      transform: scale(1, 1.2);
+    }
 
-      .name,
+    .top {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+
+
+
+
+
+    .name,
     .info {
-      
+
       padding-left: 5%;
     }
 
-      .info {
-        color: var(--beige);
-        padding-left: 15%;
-      }
+    .info {
+      color: var(--beige);
+      padding-left: 15%;
+    }
 
-      .info h2 {
-        font-family: curs;
-        font-size: 2.3rem;
-        font-weight: 500;
-        margin: 0;
-        margin-top: 1rem;
-      }
+    .info h2 {
+      font-family: curs;
+      font-size: 2.3rem;
+      font-weight: 500;
+      margin: 0;
+      margin-top: 1rem;
+    }
 
-      .info p {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        font-variant: small-caps;
-        font-weight: 100;
-        margin: 0;
-        padding-left: 45px;
-      }
+    .info p {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1rem;
+      font-variant: small-caps;
+      font-weight: 100;
+      margin: 0;
+      padding-left: 45px;
+    }
 
-      .project {
-        width: 75%;
-        margin: 100px auto;
-        background-color: var(--beige);
-        padding: 5%;
-        position: relative;
-        border-radius: 10px;
-      }
+    .project {
+      width: 75%;
+      margin: 100px auto;
+      background-color: var(--beige);
+      padding: 5%;
+      position: relative;
+      border-radius: 10px;
+    }
 
-      .project > h2 {
-        font-family: curs;
-        font-size: 3rem;
-        font-weight: 500;
-      }
+    .project>h2 {
+      font-family: curs;
+      font-size: 3rem;
+      font-weight: 500;
+    }
 
-      .project > p {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        font-variant: small-caps;
-        font-weight: 100;
-      }
+    .project>p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      font-variant: small-caps;
+      font-weight: 100;
+    }
 
-      .description {
-        width: 90%;
-        position: relative;
-        margin: auto;
-        
-     
-      }
-
-      .description > h2 {
-        font-family: curs;
-        font-size: 4rem;
-        color: var(--gold);
-        margin: 0;
-        margin-bottom: 40px;
-       text-align: center;
-      }
-
-      p {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        font-variant: small-caps;
-        font-weight: 100;
-        width: 70%;
-    
-        margin: auto;
-        margin-bottom: 15px;
-        max-width: 900px;
-        /* border: red solid; */
-      }
-
-      
-
-      
-
-      .button {
-        display: block;
-        padding: 20px 50px;
-        border-radius: 3px;
-        font-family: big;
-        text-decoration: none;
-        font-size: 1.5rem;
-        font-weight: 100;
-        width: 300px;
-        text-align: center;
-        z-index: 1;
-        margin: 60px auto  ;
- 
-      }
-
-      .button {
-        border-color: var(--gold);
-        color: #fff;
-        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
-        transition: all 900ms ease-in-out;
-        border-radius: 0;
-      }
-
-      .button:hover {
-        box-shadow: 0 0 20px 0px var(--gold) inset, 0 0 70px 10px var(--gold);
-        border: none;
-        border-radius: 25px;
-        color: var(--gold);
-      }
-
-      .button2 {
-        display: block;
-        padding: 10px 30px;
-        border-radius: 3px;
-        font-family: big;
-        text-decoration: none;
-        font-size: 1.1rem;
-        font-weight: 100;
-        text-align: center;
-        z-index: 1;
-        width: 600px;
-        margin: 60px auto;
-        color: var(--gold);
-        box-shadow: 0 0 50px 0px #ab7a412b inset, 0 0 40px 10px #ab7a411f;
-        transition: all 900ms ease-in-out;
-        border-radius: 0;
-      }
+    .description {
+      width: 90%;
+      position: relative;
+      margin: auto;
 
 
-      .button2:hover {
-        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
-        border: none;
-        border-radius: 25px;
-        color: var(--black);
-      }
-      .img1 {
-        width: 63%;
-        border-radius: 20px;
-        z-index: 4;
-        position: relative;
-        filter: drop-shadow(5px 5px 10px #1f1f1fce);
-        left: 50%;
-        transform: translate(-50%, 0);
-      }
-      .img2 {
-        position: absolute;
-        display: block;
-        width: 42vw;
-        z-index: 2;
-        top: 34vw;
-        right: -5vw;
-        border-radius: 5px;
-        box-shadow:  0 0 10px rgba(0, 0, 0, 0.11);
-      }
+    }
 
-      .img3 {
-        position: absolute;
-        display: block;
-        width: 60%;
-        z-index: 3;
-        top: 6vw;
-        right: -5%;
-        border-radius: 5px;
-        box-shadow:  0 0 10px rgba(0, 0, 0, 0.11);
-        transform: rotate(9deg);
-      }
+    .description>h2 {
+      font-family: curs;
+      font-size: 4rem;
+      color: var(--gold);
+      margin: 0;
+      margin-bottom: 40px;
+      text-align: center;
+    }
 
-      .img4 {
-        position: absolute;
-        display: block;
-        width: 56%;
-        z-index: 1;
-        top: 41vw;
-        left: 0;
-        border-radius: 5px;
-        box-shadow:  0 0 10px rgba(0, 0, 0, 0.11);
-        transform: rotate(3deg);
-      }
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      font-variant: small-caps;
+      font-weight: 100;
+      width: 70%;
 
-      .img5 {
-        position: absolute;
-        display: block;
-        width: 69%;
-        z-index: 2;
-        top: 17vw;
-        left: 0;
-        border-radius: 5px;
-        box-shadow:  0 0 10px rgba(0, 0, 0, 0.11);
-        transform: rotate(-8deg);
-      }
+      margin: auto;
+      margin-bottom: 15px;
+      max-width: 900px;
+      /* border: red solid; */
+    }
+
+
+
+
+
+    .button {
+      display: block;
+      padding: 20px 50px;
+      border-radius: 3px;
+      font-family: big;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 100;
+      width: 300px;
+      text-align: center;
+      z-index: 1;
+      margin: 60px auto;
+
+    }
+
+    .button {
+      border-color: var(--gold);
+      color: #fff;
+      box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+      transition: all 900ms ease-in-out;
+      border-radius: 0;
+    }
+
+    .button:hover {
+      box-shadow: 0 0 20px 0px var(--gold) inset, 0 0 70px 10px var(--gold);
+      border: none;
+      border-radius: 25px;
+      color: var(--gold);
+    }
+
+    .button2 {
+      display: block;
+      padding: 10px 30px;
+      border-radius: 3px;
+      font-family: big;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 100;
+      text-align: center;
+      z-index: 1;
+      width: 600px;
+      margin: 60px auto;
+      color: var(--gold);
+      box-shadow: 0 0 50px 0px #ab7a412b inset, 0 0 40px 10px #ab7a411f;
+      transition: all 900ms ease-in-out;
+      border-radius: 0;
+    }
+
+
+    .button2:hover {
+      box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+      border: none;
+      border-radius: 25px;
+      color: var(--black);
+    }
+
+    @media (max-width: 620px) {
 
       .photo-wrapper {
-        position: relative;
-        width: 100%;
-        height: 60vw;
-        /* border: blue solid; */
-        margin: auto;
+        height: 130vw !important;
       }
-    </style>
-  </head>
-  <body>
-    <main>
-      <div class="top">
-        <div class="name">
-          <h1>ResaWeb </h1>
-        </div>
+.img1 {width: 80% !important;
 
-        <div class="info">
+}
+.img2 { 
+  top: 100vw !important;
+}
+
+.img3 { 
+  top: 54vw !important;
+  width: 70% !important;
+}
+
+
+.img4 { 
+  top: 100vw !important;
+  width: 70% !important;
+}
+
+.img5 { 
+  top: 60vw !important;
+  width: 80% !important;
+}
+
+
+    }
+ 
+    .img1 {
+      width: 63%;
+      border-radius: 20px;
+      z-index: 4;
+      position: relative;
+      filter: drop-shadow(5px 5px 10px #1f1f1fce);
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .img2 {
+      position: absolute;
+      display: block;
+      width: 42vw;
+      z-index: 2;
+      top: 34vw;
+      right: -5vw;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+    }
+
+    .img3 {
+      position: absolute;
+      display: block;
+      width: 60%;
+      z-index: 3;
+      top: 6vw;
+      right: -5%;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+      transform: rotate(9deg);
+    }
+
+    .img4 {
+      position: absolute;
+      display: block;
+      width: 56%;
+      z-index: 1;
+      top: 41vw;
+      left: 0;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+      transform: rotate(3deg);
+    }
+
+    .img5 {
+      position: absolute;
+      display: block;
+      width: 69%;
+      z-index: 2;
+      top: 17vw;
+      left: 0;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+      transform: rotate(-8deg);
+    }
+
+    .photo-wrapper {
+      position: relative;
+      width: 100%;
+      height: 60vw;
+      /* border: blue solid; */
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="top">
+      <div class="name">
+        <h1>ResaWeb </h1>
+      </div>
+
+      <div class="info">
+        <div>
           <h2>Role</h2>
           <p>Conseption, UI, Web Dev</p>
+        </div>
 
+        <div>
           <h2>Technologies</h2>
           <p>HTML, CSS, JavaScript, PHP, MySQL</p>
+        </div>
 
+        <div>
           <h2>Type</h2>
           <p>Educational project</p>
+        </div>
 
+        <div>
           <h2>Year</h2>
           <p>2022 March-May</p>
         </div>
       </div>
+    </div>
 
-      <div class="project">
-        <div class="description">
-          <h2>Description</h2>
-          <p>ResaWeb became a significant educational project during the second semester of my studies at IUT. The assignment required creating a website for reserving products or services. This website involved working with data models and establishing a database that not only included one-to-one relationships but also many-to-many, implying the presence of intermediate tables. The project didn't mandate the creation of user accounts and a shopping cart, but it was necessary to organize a system capable of generating product pages automatically based on query data. Additionally, it needed to handle client orders by storing them in the database and sending email notifications.
-            </p><p> 
-            Regarding design, the site had to display correctly between 768 and 1280 pixels and ideally have a mobile version. It also had to comply with WCAG AA standards and pass accessibility checks according to Opkvaast rules.</p>
+    <div class="project">
+      <div class="description">
+        <h2>Description</h2>
+        <p>ResaWeb became a significant educational project during the second semester of my studies at IUT. The
+          assignment required creating a website for reserving products or services. This website involved working with
+          data models and establishing a database. The project didn't mandate the creation of user accounts and a
+          shopping cart, but it was necessary to organize a system capable of generating product pages automatically
+          based on query data. Additionally, it needed to handle client orders by storing them in the database and
+          sending email notifications.
+        </p>
+        <p>
+          Regarding design, the site had to display correctly between 768 and 1280 pixels and ideally have a mobile
+          version. It also had to comply with WCAG AA standards and pass accessibility checks according to Opquast
+          rules.</p>
 
-            <div class="photo-wrapper">
-              <img class="img5" src="./img/projects/resaweb5.jpg" alt="">
-           
-              <img class="img1" src="./img/projects/resaweb.jpg" alt="" />
-              <img class="img3" src="./img/projects/resaweb3.jpg" alt="">
-                        <img class="img2" src="./img/projects/resaweb2.jpg" alt="">
-                        <img class="img4" src="./img/projects/resaweb4.jpg" alt="">
-            </div>
+        <div class="photo-wrapper">
+          <img class="img5" src="./img/projects/resaweb5.jpg" alt="">
 
-            
-          
-            <p>For the project idea, I chose a service that offers photographers the organization of tourist trips, including not only sightseeing but also photography workshops. The service also provides equipment rental during journeys, allowing photographers to try out new cameras, lenses, and more.</p>
-
-            <p>As the project idea is very dear to me, creating a visually appealing design that is simultaneously aesthetic and user-friendly was crucial. For the first time, I was able to work with the MidJourney AI, which helped me generate visuals for all proposed tours after minor correction in Photoshop.</p>
-
-<p>The project also complies with accessibility requirements, such as skip links and alternative texts.</p>
-
-<p>The site features a search bar (PHP), filters (JavaScript), and sorting by price (PHP). The order page includes JavaScript to calculate the final cost, considering various conditions like travel in the order, the quantity of gadgets for rent, the number of days, etc.</p>
-<a class="button" href="#"
->Watch the project <span></span><span></span><span></span
-><span></span>
-</a>
+          <img class="img1" src="./img/projects/resaweb.jpg" alt="" />
+          <img class="img3" src="./img/projects/resaweb3.jpg" alt="">
+          <img class="img2" src="./img/projects/resaweb2.jpg" alt="">
+          <img class="img4" src="./img/projects/resaweb4.jpg" alt="">
         </div>
-        
 
+
+
+        <p>For the project idea, I chose a service that offers photographers the organization of tourist trips,
+          including not only sightseeing but also photography workshops. The service also provides equipment rental
+          during journeys, allowing photographers to try out new cameras, lenses, and more.</p>
+
+        <p>As the project idea is very dear to me, creating a visually appealing design that is simultaneously aesthetic
+          and user-friendly was crucial. For the first time, I was able to work with the MidJourney AI, which helped me
+          generate images for all proposed tours with minor correction in Photoshop after.</p>
+
+        <p>The project also complies with accessibility requirements, such as skip links and alternative texts.</p>
+
+        <p>The site features a search bar (PHP), filters (JavaScript), and sorting by price (PHP). The order page
+          includes JavaScript to calculate the final cost, considering various conditions like travel in the order, the
+          quantity of gadgets for rent, the number of days, etc.</p>
+        <a class="button" href="#">Watch the project <span></span><span></span><span></span><span></span>
+        </a>
       </div>
-       
-      <a class="button2" href="index.html"
-        >Retutn to main page <span></span><span></span><span></span><span></span>
-      </a>
-    </main>
-  </body>
+
+
+    </div>
+
+    <a class="button2" href="index.html">Retutn to main page <span></span><span></span><span></span><span></span>
+    </a>
+  </main>
+</body>
+
 </html>

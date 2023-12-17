@@ -101,6 +101,11 @@
     font-weight: 500;
 }
 
+.picture {
+    cursor: pointer;
+    z-index: 5;
+}
+
 .container .card .content a:hover {
     opacity: 0.8;
 }

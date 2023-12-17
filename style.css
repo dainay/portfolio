@@ -26,7 +26,9 @@
 body {
   background-color: var(--blue);
   margin: 0;
+  scroll-behavior: smooth;
 }
+ 
 
 #top .img-back {
   width: 100%;
@@ -37,7 +39,23 @@ body {
 }
 
 
+
+
 @media (max-width: 600px) {
+
+  #top {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+ z-index: 10 !important;
+    padding-bottom: 50% !important;
+  }
+
+
+#about {
+  z-index: 1 !important;
+}
+
+
   #top .img-back {
     width: 150%;
     margin: 0;
@@ -46,31 +64,60 @@ body {
     z-index: -1;
     transform: translate(-50%, 0);
     left: 50%;
+   
   }
 
-  #top {
-    padding-bottom: 70% !important;
-  }
+
 
   #ltcloud {
     
     width: 51vw !important;
-    top: 45vw !important;
-     
+  
   }
+
+
+ 
 
   #rtcloud {
     
-    width: 46vw !important;
+    width: 50vw !important;
     
-    top: 65vw !important;
   
   }
   
 
   #top > h1 { 
-    font-size: 10vw;
+    font-size: 14vw !important;
+    letter-spacing: -4vw !important;
+    padding: 3vw !important;
+    /* border: red solid; */
+    z-index: 0 !important;
+    /* width: 15%; */
+    margin: auto !important;
+    margin-top: 25vw !important;
+    line-height: 11vw !important ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 10vw;
   }
+
+  #top > h2 {
+    font-size: 9vw !important;
+    position: relative;
+    top: 13vw !important;
+   }
+
+   #top > p{
+   
+    max-width: 30vw;
+    font-size: 2.3vw !important;
+    position: relative;
+    top: 12vw;
+   
+   }
+
 }
 
 
@@ -80,6 +127,18 @@ body {
   margin: 0;
   padding-bottom: 45%;
 }
+
+#top > h1 >span {
+  transition: all 0.1s ease-in-out;
+}
+
+#top > h1 >span:not(.gold):hover {
+  text-shadow: 0 0 15px whitesmoke, 0 0 35px rgba(245, 245, 245, 0.438), 0 0 4px whitesmoke, 0 0 50px whitesmoke;
+} 
+
+#top > h1 > .gold:hover {
+  text-shadow: 0 0 15px #ab7a4198, 0 0 35px #ab7a4198, 0 0 4px #b3824bef, 0 0 50px #ab7a413f;
+} 
 
 #top > h1 {
   margin: 0;
@@ -117,7 +176,7 @@ body {
   margin: auto;
   font-variant: small-caps;
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.9vw;
+  font-size: 1.4vw;
   text-align: center;
 }
 
@@ -130,7 +189,59 @@ body {
   overflow: visible;
   border: none;
   outline: none;
+ 
 }
+
+#wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.sticky-left {
+  position: fixed !important;
+  top: -48vw !important;
+z-index: 1000 !important;
+
+ 
+}
+
+
+.sticky-right {
+  position: fixed !important;
+  top: -30vw !important;
+z-index: 1000 !important;
+
+ 
+}
+
+.rtcloud-600-normal {
+  position: absolute;
+  top: 67vw !important;
+
+ }
+
+ .rtcloud-600-sticky {
+  position: fixed !important;
+  top: -29vw !important;
+
+ 
+
+ }
+
+
+.ltcloud-600-normal {
+  position: absolute;
+  top: 49vw !important;
+
+ }
+
+ .ltcloud-600-sticky {
+  position: fixed !important;
+  top: -36vw !important;
+
+ }
+
+
 
 #rtcloud {
   display: block;
@@ -138,7 +249,7 @@ body {
   position: absolute;
 
   top: 39.3vw;
-  right: 0;
+  right: 0vw;
 }
 
 #ltcloud > img,
@@ -162,12 +273,12 @@ ABOUT */
 .wrapper-about {
   display: flex;
   flex-direction: column;
-  
+  overflow: hidden;
   justify-content: center;
 }
 
 .left-about {
-  margin-top: 100px;
+  padding-top: 300px;
   margin: auto;
 }
 
@@ -209,11 +320,22 @@ ABOUT */
 @media (max-width: 1000px){
   .right-about > p {width: 50%;}
   #myphoto { width: 49% !important;}
+  #me {
+    width: 22vw !important;
+    left: 15vw !important;
+    bottom: 0.7vw !important;
+  }
 }
 
 @media (max-width: 550px){
   .right-about > p {width: 70%;}
   #myphoto { width: 70% !important;}
+
+  #me {
+    width: 34vw !important;
+    left: 20vw !important;
+    bottom: 1vw !important;
+  }
 }
 
 #myphoto {
@@ -222,7 +344,7 @@ ABOUT */
   margin-top: 5vw;
 }
 
-#myphoto > img {
+#myphoto > img:first-child {
   width: 100%;
 }
 
@@ -320,8 +442,16 @@ SKILLS */
   font-size: 1.1rem;
   color: var(--blue);
   transform: scale(1, 1.2);
+
 }
 
+
+
+.cv-block h4,.cv-block p  {
+  margin: 1vw;
+  font-size: 1.1rem;
+} 
+ 
 .cv1 {
   top: 3.5vw;
   right: 10%;
@@ -359,15 +489,24 @@ SKILLS */
   z-index: -2;
 }
 
-@media (max-width: 1370px) {
+@media (max-width: 1500px) {
   #path1 {
     stroke: white;
   }
 }
 
-@media (max-width: 852px) {
+@media (max-width: 1100px) {
   .cv-block {
     position: initial;
+    margin: auto;
+  }
+
+  #skills-block {
+    margin-top: 10vw;
+  }
+
+  .cv-block h3 {
+    margin-top: 6vw;
   }
 
   #svg1 {
@@ -419,8 +558,16 @@ SKILLS */
 @media (max-width: 600px) {
   .skills-wrapper > div > h4 { 
     line-height:normal  }
+
+    #flying {
+      font-size: 21vw !important;
+    }
 }
 
+
+/* * {
+  border: red solid;
+} */
 
 @media (max-width: 1000px) {
   #skills-block > h3 {
@@ -433,6 +580,14 @@ SKILLS */
       font-size: 8vw;
     }
   
+    #facts {
+      margin-bottom: 0;
+      padding-bottom: 7vw;
+    }
+
+#web-design {
+  margin-top: 13vw !important;
+}
 
   .skills-wrapper > div > h4 {
     font-size: 6.5vw;
@@ -626,13 +781,13 @@ SKILLS */
 
 .Picture-img {
   display: block;
-  width: 300px;
-  aspect-ratio: 3/4;
+  width: 230px;
+  aspect-ratio: 3/4.4;
   pointer-events: none;
 }
 .Picture-img2 {
   display: block;
-  width: 400px;
+  width: 350px;
   aspect-ratio: 4.5/3;
   pointer-events: none;
 }
@@ -642,13 +797,14 @@ SKILLS */
   align-items: center;
   justify-content: center;
   font-family: big;
-  width: 300px;
+  width: 230px;
  
   font-weight: 100;
   height: 70px;
   flex-direction: column;
   flex-wrap: nowrap;
   text-align: center;
+  font-size: 0.8rem !important;
    
 }
 
@@ -657,12 +813,12 @@ SKILLS */
   align-items: center;
   justify-content: center;
   font-family: big;
-  width: 400px;
+  width: 350px;
   font-weight: 100;
   height: 70px;
   flex-direction: column;
   flex-wrap: nowrap;
-   
+  font-size: 0.8rem !important;
   text-align: center;
 }
 
@@ -825,7 +981,7 @@ SKILLS */
   transition: all ease 1s;
   opacity: 0;
   padding: 0 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Cormorant Garamond", serif;
   font-variant: small-caps;
   font-weight: 100;
   font-size: 1rem;
@@ -844,7 +1000,7 @@ box-shadow: #1c1b1b 0 0 15px;
   width: fit-content;
   padding: 5px;
   font-size: 0.6rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Cormorant Garamond", serif;
   font-variant: small-caps;
   margin: 0 5px;
   
@@ -905,7 +1061,17 @@ small screen */
   font-size: 1rem;
   margin: auto;
   padding: 20px 10px;
+  transition: all ease-in 0.2s;
 }
+
+
+.cards-links:hover {
+background-color: var(--gold) ;
+color: var(--blue);
+border: none;
+
+}
+
 
 .pop-up {
   width: 80%;
@@ -918,6 +1084,20 @@ small screen */
 @media (max-width: 1000px) {
   .pop-up {
     width: 100%;}
+
+    #skills {
+      width: 97% !important;
+      padding: 10px;
+    }
+
+    .pop-up-right {
+width: 90% !important;}
+
+
+#cloud1-skills { 
+right: 2vw;
+top: -17vw;
+    }
 
 }
 
@@ -956,7 +1136,17 @@ small screen */
 .texts-skills {
   margin: 10%;
   text-align: left;
+
 }
+
+
+.texts-skills p {
+  font-family: "Cormorant Garamond", serif !important;
+  font-variant: small-caps;
+
+}
+
+
 
 .seen {
   max-height: 1000px;
@@ -989,6 +1179,7 @@ small screen */
 
 .icon {
   width: 3vw;
+  min-width: 40px;
   max-width: 60px;
   min-height: 40px;
 margin-right: 0.6vw;
@@ -1005,6 +1196,7 @@ min-height: 90vh;
 display: grid;
 justify-content: center;
   align-content: center;
+  overflow: hidden;
 
 }
 
@@ -1071,3 +1263,53 @@ width: 20%;
   justify-content: space-evenly;
   margin-bottom: 50px;
 }
+
+#seemore {
+  background-color: transparent;
+  display: block;
+      padding: 20px 50px;
+      border-radius: 3px;
+      font-family: big;
+     
+      font-size: 1.5rem;
+      font-weight: 100;
+      width: 300px;
+      text-align: center;
+ 
+      margin: 120px auto;
+      border-color: var(--gold);
+      color: #fff;
+      box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+      transition: all 900ms ease-in-out;
+      border-radius: 3px;
+      cursor: pointer;
+}
+
+#seemore:hover {
+  box-shadow: 0 0 20px 0px var(--gold) inset, 0 0 70px 10px var(--gold);
+      border: none;
+ border: var(--gold) solid 1px;
+      color: var(--gold);
+}
+
+
+#cloud-bottom-wrapper {
+  height: 15vw;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+  #bottom-cloud {
+    position: absolute;
+    top: 0;
+    right: -20vw;
+    width: 65%;
+    aspect-ratio: 3/2;
+    transform: rotate(40deg);
+    z-index: 1;
+  }
+
+  /* * {
+    border: red solid;
+  } */

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./scroll.css">
     <title>Daria Iarovaia - Chinese Portrait</title>
+    <link rel="stylesheet" href="./mobile-projects.css">
     <style>
       *,
       *:before,
@@ -198,6 +199,39 @@
         border-radius: 25px;
         color: var(--black);
       }
+
+
+
+      @media (max-width: 1650px) {
+        .visual {
+          padding: 0;
+        }
+       }
+
+      @media (max-width: 1650px) {
+        .project {
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+         
+        }
+
+        .description {
+          margin: auto;
+          margin-top: 50px;
+          padding-right: 0;
+        }
+
+        .description h2 {
+          text-align: center;
+        }
+        .description p {
+          max-width: 800px;
+          margin: auto;
+        }
+
+
+      }
     </style>
   </head>
   <body>
@@ -208,32 +242,40 @@
         </div>
 
         <div class="info">
-          <h2>Role</h2>
-          <p>Conseption, UI, Web Dev</p>
+          <div>
+            <h2>Role</h2>
+            <p>Conseption, UI, Web Dev</p>
+          </div>
 
-          <h2>Technologies</h2>
-          <p>HTML, CSS, JavaScript</p>
+          <div>
+            <h2>Technologies</h2>
+            <p>HTML, CSS, JavaScript</p>
+          </div>
 
-          <h2>Type</h2>
-          <p>Educational project</p>
+          <div>
+            <h2>Type</h2>
+            <p>Educational project</p>
+          </div>
 
-          <h2>Year</h2>
-          <p>2022 November-December</p>
+          <div>
+            <h2>Year</h2>
+            <p>2022 November-December</p>
+          </div>
         </div>
       </div>
 
       <div class="project">
         <div class="description">
           <h2>Description</h2>
-          <p>This project became the starting point for my exploration of front-end development. It's my very first independent page created using HTML, CSS, and JavaScript as educational project.</p>
+          <p>This project became the starting point for my exploration of development and my first page created with HTML, CSS, and JavaScript.</p>
 
-<p>The idea behind the project was to present myself through associations with various objects and phenomena. The project had no thematic or specific element requirements for the page, except for a form. This form was designed to add new blocks to the site while maintaining a consistent style. Consequently, I worked with JSON objects for the first time.</p>
+<p>The idea behind the project was to present myself through associations with various objects and phenomenas. The project had no thematic or specific element requirements for the page, except for a form. This form should have been designed to add new blocks to the site with imformation from the site viditor. Consequently, I worked with JSON objects.</p>
 
 <p>As this project was my initial endeavor, there were no stringent requirements for responsiveness or accessibility. The only condition was that the site should display information correctly between 768 and 1280 pixels.</p>
 
-<p>It was also essential, as per the project guidelines, to work exclusively with libre, Drupal, or Creative Commons sources.</p>
+<p>It was also essential, as per the project guidelines, to work exclusively with Free or Creative Commons sources.</p>
 
-<p>To introduce myself, I chose a broad range of phenomena and objects that could evoke various emotions. I selected a movie, music, a color, a book, a hobby, a dance style, and a holiday. The primary visual presentation used the parallax effect. To add a touch of individuality to the design, I decided to incorporate videos for navigation buttons and created a festive Christmas mode that triggers music and a snow animation.</p>
+<p>To introduce myself, I chose a broad range of phenomena and objects that could evoke various emotions. The primary visual presentation used the parallax effect. To add a touch of individuality to the design, I decided to incorporate videos for navigation buttons and created a Christmas mode that triggers music and a snow animation.</p>
 
           <a class="button" href="#"
             >Watch the project <span></span><span></span><span></span
@@ -241,7 +283,7 @@
           </a>
         </div>
         <div class="visual">
-          <img class="img1" src="./img/chinese.png" alt="" />
+          <img class="img1" src="./img/projects/chinese.png" alt="" />
           
         </div>
       </div>

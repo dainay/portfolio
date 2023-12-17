@@ -1,309 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daria Iarovaia - OlympicViz</title>
+    <link rel="stylesheet" href="./scroll.css" />
+    <link rel="stylesheet" href="./mobile-projects.css" />
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DataViz</title>
-  <link rel="stylesheet" href="./scroll.css">
-  <style>
-    *,
-    *:before,
-    *:after {
-      box-sizing: border-box;
-    }
+      @font-face {
+        font-family: big;
+        src: url(./fonts/ENGR.TTF);
+      }
 
-    @font-face {
-      font-family: big;
-      src: url(./fonts/ENGR.TTF);
-    }
+      @font-face {
+        font-family: curs;
+        src: url(./fonts/adeptly-font/AdeptlyRegular.ttf);
+      }
 
-    @font-face {
-      font-family: curs;
-      src: url(./fonts/adeptly-font/AdeptlyRegular.ttf);
-    }
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
 
-    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
+      :root {
+        --blue: #070713;
+        --beige: #ede4e4;
+        --gold: #ab7a41;
+        --black: #1c1b1b;
+      }
 
-    :root {
-      --blue: #070713;
-      --beige: #ede4e4;
-      --gold: #ab7a41;
-      --black: #1c1b1b;
-    }
+      body {
+        background-color: var(--blue);
+        margin: 0;
+        background-image: url("./img/back-photos.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
 
-    body {
-      background-color: var(--blue);
-      margin: 0;
-      background-image: url("./img/back-photos.jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-    }
+      h1 {
+        color: var(--gold);
+        font-family: big;
+        font-size: 7vw;
+        font-weight: 100;
+        transform: scale(1, 1.2);
+      }
 
-    h1 {
-      color: var(--gold);
-      font-family: big;
-      font-size: 7vw;
-      font-weight: 100;
-      transform: scale(1, 1.2);
-    }
+      .top {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    .top {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .name,
+      .name,
     .info {
-      width: 49%;
+      
       padding-left: 5%;
     }
 
-    .info {
-      color: var(--beige);
-      padding-left: 15%;
-    }
-
-    .info h2 {
-      font-family: curs;
-      font-size: 2.3rem;
-      font-weight: 500;
-      margin: 0;
-      margin-top: 1rem;
-    }
-
-    .info p {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1rem;
-      font-variant: small-caps;
-      font-weight: 100;
-      margin: 0;
-      padding-left: 45px;
-    }
-
-    .project {
-      width: 90%;
-      margin: 100px auto;
-      background-color: var(--beige);
-      padding: 5%;
-      border-radius: 10px;
-    }
-
-    .wrapper {
-      width: 100%;
-      display: flex;
-      position: relative;
-     
-      flex-wrap: nowrap;
-    }
-
-    @media (max-width: 1500px) {
-      .wrapper {
-        flex-wrap: wrap;
+      .info {
+        color: var(--beige);
+        padding-left: 15%;
       }
+
+
+      .info h2 {
+        font-family: curs;
+        font-size: 2.3rem;
+        font-weight: 500;
+        margin: 0;
+        margin-top: 1rem;
+      }
+
+      .info p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+        margin: 0;
+        padding-left: 45px;
+      }
+
+      .project {
+        width: 90%;
+        margin: 100px auto;
+        background-color: var(--beige);
+        padding: 5%;
+        border-radius: 10px;
+      }
+
+      .wrapper {
+        width: 100%;
+        display: flex;
+        position: relative;
+
+        flex-wrap: nowrap;
+      }
+
+      @media (max-width: 1500px) {
+        .wrapper {
+          flex-wrap: wrap-reverse;
+        }
+        .visual {
+          top: 20px !important;
+        }
+        .project h2 {
+        text-align: center !important;
+      }
+
+      .button {
+        margin: 6vw auto !important;
+      }
+
+      }
+
+      .project > h2 {
+        font-family: curs;
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--gold);
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+
+      .project > p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+      }
+
+      .description {
+        position: relative;
+        padding-right: 5%;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-variant: small-caps;
+        font-weight: 100;
+      }
+
       .visual {
-      top: 20px !important;
-    }
-  }
+        padding: 30px;
+        position: relative;
 
-    .project>h2 {
-      font-family: curs;
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin: 0;
-      margin-bottom: 2rem;
-      
+        top: -50px;
+      }
 
-    }
+      .img2 {
+        width: 90%;
+        border-radius: 10px;
+        position: relative;
+        left: 100px;
+        top: -100px;
+        z-index: 1;
 
-    .project>p {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1rem;
-      font-variant: small-caps;
-      font-weight: 100;
-    }
+        filter: drop-shadow(5px 5px 10px #1f1f1f91);
+      }
 
-    .description {
+      .img1 {
+        width: 90%;
+        border-radius: 10px;
+        z-index: 2;
+        position: relative;
+        filter: drop-shadow(5px 5px 10px #1f1f1f91);
+      }
 
-      position: relative;
-      padding-right: 5%;
+      .button {
+        display: block;
+        padding: 20px 50px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 100;
+        width: 300px;
+        text-align: center;
+        z-index: 1;
+        margin: 60px auto;
+      }
 
-    }
+      .button {
+        border-color: var(--gold);
+        color: #fff;
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+        margin: 0px auto;
+      }
 
+      .button:hover {
+        box-shadow: 0 0 20px 0px var(--gold) inset, 0 0 70px 10px var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--gold);
+      }
 
+      .button2 {
+        display: block;
+        padding: 10px 30px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 100;
+        text-align: center;
+        z-index: 1;
+        width: 600px;
+        margin: 60px auto;
+        color: var(--gold);
+        box-shadow: 0 0 50px 0px #ab7a412b inset, 0 0 40px 10px #ab7a411f;
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+      }
 
-    p {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1rem;
-      font-variant: small-caps;
-      font-weight: 100;
-    }
+      .button2:hover {
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--black);
+      }
 
-    .visual {
-      padding: 30px;
-      position: relative;
-     
-      top: -50px;
-      
+      @media (max-width: 650px) {
 
-    }
+        .img2 {
+        width: 90%;
+        margin: auto;
+        top: -9vw;
+        left: 3vw;
+       
+      }
 
-    .img2 {
-      width: 90%;
-      border-radius: 20px;
-      position: relative;
-      left: 100px;
-      top: -100px;
-      z-index: 1;
+      .img1 {
+        width: 100%;
+        
+      }
 
-      filter: drop-shadow(5px 5px 10px #1f1f1f91);
-    }
+   
 
+      }
 
-    .img1 {
-      width: 90%;
-      border-radius: 20px;
-      z-index: 2;
-      position: relative;
-      filter: drop-shadow(5px 5px 10px #1f1f1f91);
-    }
+    </style>
+  </head>
 
-    .button {
-      display: block;
-      padding: 20px 50px;
-      border-radius: 3px;
-      font-family: big;
-      text-decoration: none;
-      font-size: 1.5rem;
-      font-weight: 100;
-      width: 300px;
-      text-align: center;
-      z-index: 1;
-      margin: 60px auto;
-
-    }
-
-    .button {
-      border-color: var(--gold);
-      color: #fff;
-      box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
-      transition: all 900ms ease-in-out;
-      border-radius: 0;
-      margin: 0px auto;
-    }
-
-    .button:hover {
-      box-shadow: 0 0 20px 0px var(--gold) inset, 0 0 70px 10px var(--gold);
-      border: none;
-      border-radius: 25px;
-      color: var(--gold);
-    }
-
-    .button2 {
-      display: block;
-      padding: 10px 30px;
-      border-radius: 3px;
-      font-family: big;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 100;
-      text-align: center;
-      z-index: 1;
-      width: 600px;
-      margin: 60px auto;
-      color: var(--gold);
-      box-shadow: 0 0 50px 0px #ab7a412b inset, 0 0 40px 10px #ab7a411f;
-      transition: all 900ms ease-in-out;
-      border-radius: 0;
-    }
-
-
-    .button2:hover {
-      box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
-      border: none;
-      border-radius: 25px;
-      color: var(--black);
-    }
-  </style>
-</head>
-
-<body>
-  <main>
-    <div class="top">
-      <div class="name">
-        <h1>DataVIz </h1>
-      </div>
-
-      <div class="info">
-        <h2>Role</h2>
-        <p>Conception, UI, Web-Front</p>
-
-        <h2>Technologies</h2>
-        <p>HTML, CSS, JavaScript, D3</p>
-
-        <h2>Type</h2>
-          <p>Educational project</p>
-
-        <h2>Year</h2>
-        <p>2023 October-November</p>
-      </div>
-    </div>
-
-
-
-    <div class="project">
-
-      <h2 class="h2-desc">Description</h2>
-
-      <div class="wrapper">
-        <div class="description">
-
-          <p>One of the key projects in the development during the third semester of my studies was a data visualization
-            project using the D3 library. For this project, we needed to find or gather data on any topic and present it
-            in the form of charts using JavaScript. Ideally, this representation should be interactive.</p>
-
-          <p>There were no specific design requirements for the project. The site should function correctly on the
-            desktop
-            version for screens larger than 1024 pixels.</p>
-
-          <p>As Paris is the host city for the 2024 Olympic Games, I proposed the theme of statistics on the number of
-            Olympic medals for the project. This site not only provides factual information about medals in different
-            years for each nation, the overall medal standings of countries and athletes, but also includes an
-            analytical
-            element, presenting the ratio of medals won by countries hosting the Olympic Games.</p>
-
-          <p>All data presented on the page, through JavaScript filters and sorting, is generated from a single file
-            containing the names and surnames of all Olympic winners, their sport, country, medal quality, and the year
-            of
-            victory.</p>
-
-          <p>Coding this responsive stream graph was the most challenging part of the project, as there were relatively
-            few online resources dedicated to this type of diagram.</p>
-
-          <p> The site's design was aligned with the Paris Olympic campaign to demonstrate a direct connection between
-            these two projects.</p>
-         
-        </div>
-        <div class="visual">
-          <img class="img1" src="./img/projects/dataviz.png" alt="" />
-
-          <img class="img2" src="./img/projects/dataviz2.jpg" alt="">
+  <body>
+    <main>
+      <div class="top">
+        <div class="name">
+          <h1>DataViz</h1>
         </div>
 
+        <div class="info">
+          <div>
+            <h2>Role</h2>
+            <p>Conception, UI, Web-Front</p>
+          </div>
+          <div>
+            <h2>Technologies</h2>
+            <p>HTML, CSS, JavaScript, D3</p>
+          </div>
+
+          <div>
+            <h2>Type</h2>
+            <p>Educational project</p>
+          </div>
+          <div>
+            <h2>Year</h2>
+            <p>2023 October-November</p>
+          </div>
+        </div>
       </div>
-      <a class="button" href="#">Watch the project <span></span><span></span><span></span><span></span>
+
+      <div class="project">
+        <h2 class="h2-desc">Description</h2>
+
+        <div class="wrapper">
+          <div class="description">
+            <p>
+              One of the key projects in the development during the third
+              semester of my studies was a data visualization project. For this project, we needed to find or gather data on
+              any topic and present it in the form of charts using JavaScript and D3.
+              Ideally, this representation should be interactive.
+            </p>
+
+            <p>
+              There were no specific design requirements for the project. The
+              site should function correctly on the desktop version for screens
+              larger than 1024 pixels.
+            </p>
+
+            <p>
+              As Paris is the host city for the 2024 Olympic Games, I proposed
+              the theme of statistics on the number of Olympic medals. This site not only provides factual information about
+              medals in different years, but also includes an
+              analytical element, presenting the ratio of medals won by
+              countries hosting the Olympic Games.
+            </p>
+
+            <p>
+              All data presented on the page, through JavaScript filters and
+              sorting function, is generated from a single file containing the names and
+              surnames of all Olympic winners, their sport, country, medal
+              quality, and the year of victory.
+            </p>
+
+            
+          </div>
+          <div class="visual">
+            <img class="img1" src="./img/projects/dataviz.png" alt="" />
+
+            <img class="img2" src="./img/projects/dataviz2.jpg" alt="" />
+          </div>
+        </div>
+        <a class="button" href="#"
+          >Watch the project <span></span><span></span><span></span
+          ><span></span>
+        </a>
+      </div>
+
+      <a class="button2" href="index.html"
+        >Retutn to main page <span></span><span></span><span></span
+        ><span></span>
       </a>
-    </div>
-
-    <a class="button2" href="index.html">Retutn to main page <span></span><span></span><span></span><span></span>
-    </a>
-
-  </main>
-</body>
-
+    </main>
+  </body>
 </html>

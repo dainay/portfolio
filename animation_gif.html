@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./scroll.css">
-    <title>Daria Iarovaia -Giftbox</title>
+    <link rel="stylesheet" href="./scroll.css" />
+    <title>Daria Iarovaia - Giftbox</title>
+    <link rel="stylesheet" href="./mobile-projects.css" />
     <style>
       *,
       *:before,
@@ -57,10 +58,9 @@
       }
 
       .name,
-    .info {
-      
-      padding-left: 5%;
-    }
+      .info {
+        padding-left: 5%;
+      }
 
       .info {
         color: var(--beige);
@@ -111,7 +111,6 @@
         width: 90%;
         position: relative;
         padding-right: 5%;
-     
       }
 
       .description > h2 {
@@ -131,13 +130,12 @@
 
       .visual {
         padding: 30px;
-         
       }
 
       .img1 {
         width: 100%;
         border-radius: 20px;
-        
+ 
         filter: drop-shadow(5px 5px 10px #1f1f1f91);
       }
 
@@ -152,8 +150,7 @@
         width: 300px;
         text-align: center;
         z-index: 1;
-        margin: 60px auto  ;
- 
+        margin: 60px auto;
       }
 
       .button {
@@ -169,6 +166,48 @@
         border: none;
         border-radius: 25px;
         color: var(--gold);
+      } 
+
+      .button2 {
+        display: block;
+        padding: 10px 30px;
+        border-radius: 3px;
+        font-family: big;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 100;
+        text-align: center;
+        z-index: 1;
+        width: 600px;
+        margin: 60px auto;
+        color: var(--gold);
+        box-shadow: 0 0 50px 0px #ab7a412b inset, 0 0 40px 10px #ab7a411f;
+        transition: all 900ms ease-in-out;
+        border-radius: 0;
+      }
+
+      .button2:hover {
+        box-shadow: 0 0 40px 80px var(--gold) inset, 0 0 0 0 var(--gold);
+        border: none;
+        border-radius: 25px;
+        color: var(--black);
+      }
+
+      @media (max-width: 1000px) {
+        .project {
+          display: flex !important;
+          justify-content: center !important;
+          flex-direction: column-reverse !important;
+        }
+
+        .description {
+          padding-right: 0;
+          margin: auto;
+        }
+
+       .project h2 {
+          text-align: center;
+        }
       }
     </style>
   </head>
@@ -176,42 +215,58 @@
     <main>
       <div class="top">
         <div class="name">
-          <h1>GiftBox </h1>
+          <h1>GiftBox</h1>
         </div>
 
         <div class="info">
-          <h2>Role</h2>
-          <p>Conception, Realisation</p>
+          <div>
+            <h2>Role</h2>
+            <p>Conception, Realisation</p>
+          </div>
 
-          <h2>Technologies</h2>
-          <p>Photoshop</p>
+          <div>
+            <h2>Technologies</h2>
+            <p>Photoshop</p>
+          </div>
 
-          <h2>Type</h2>
-          <p>Educational project</p>
+          <div>
+            <h2>Type</h2>
+            <p>Educational project</p>
+          </div>
 
-          <h2>Year</h2>
-          <p>2022 October</p>
+          <div>
+            <h2>Year</h2>
+            <p>2022 October</p>
+          </div>
         </div>
       </div>
 
       <div class="project">
         <div class="description">
           <h2>Description</h2>
-          <p>The aim of this project was to learn how to create GIF animations in Photoshop, which could serve as banners on websites. To achieve this, it was necessary to come up with any advertising campaign and then create a storyboard.</p>
+          <p>
+            The aim of this project was to learn how to create GIF animations in
+            Photoshop, which could serve as banners on websites. To achieve
+            this, it was necessary to come up with any advertising campaign and
+            then create a little story to present.
+          </p>
 
-            <p>For this task, I chose an advertisement for a fictional online store that offers to find a gift for anyone on your behalf. The most challenging aspect of the project was the 5 MB limit for the final file. You can see the result on the right.</p>
-           
+          <p>
+            For this task, I chose an advertisement for a fictional online store
+            that offers to find a gift for anyone on your behalf. The most
+            challenging aspect of the project was the 5 MB limit for the final
+            file.  
+          </p>
         </div>
         <div class="visual">
           <img class="img1" src="./img/projects/Big-format.gif" alt="" />
         </div>
-
       </div>
-        <!-- <a class="button" href="#"
-            >Watch the project <span></span><span></span><span></span
-            ><span></span>
-          </a> -->
-      
+     
+      <a class="button2" href="index.html"
+        >Retutn to main page <span></span><span></span><span></span
+        ><span></span>
+      </a>
     </main>
   </body>
 </html>

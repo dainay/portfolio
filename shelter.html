@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daria Iarovaia - Urbain Project</title>
     <link rel="stylesheet" href="./scroll.css">
+    <link rel="stylesheet" href="./mobile-projects.css">
     <style>
       *,
       *:before,
@@ -197,6 +198,20 @@
         transform: translate(-50%, 0);
       }
 
+@media (max-width: 1000px) {
+  .img2 {
+    display: none;
+  }
+
+  .img3 {
+    width: 95% !important;
+  }
+
+  video {
+    width: 100% !important;
+  }
+}
+
       .img2 {
         position: absolute;
         display: none;
@@ -258,22 +273,30 @@
         </div>
 
         <div class="info">
-          <h2>Role</h2>
-          <p>
-            Graphic Design, UI, Integration, Motion Design, Marketing Research
-          </p>
+          <div>
+            <h2>Role</h2>
+            <p>
+              Graphic Design, UI, Integration, Motion Design, Marketing Research
+            </p>
+          </div>
 
-          <h2>Technologies</h2>
-          <p>
-            WordPress, Hosting, Photoshop, inDesign, Illustrator, AfterEffect,
-            Figma
-          </p>
+          <div>
+            <h2>Technologies</h2>
+            <p>
+              WordPress, Hosting, Photoshop, inDesign, Illustrator, AfterEffect,
+              Figma
+            </p>
+          </div>
 
-          <h2>Type</h2>
-          <p>Group Educational project</p>
+          <div>
+            <h2>Type</h2>
+            <p>Group Educational project</p>
+          </div>
 
-          <h2>Year</h2>
-          <p>2022 February-May</p>
+          <div>
+            <h2>Year</h2>
+            <p>2022 February-May</p>
+          </div>
         </div>
       </div>
 
@@ -312,7 +335,7 @@
 
           <p>
             Due to my deep concern for animal welfare, I proposed to my team
-            that we assist a shelter in our urban project. We selected the PPP
+            that we assist a shelter. We selected the "Relais des Animaux"
             shelter, focusing primarily on redesigning their website.
           </p>
 
@@ -348,7 +371,7 @@
             to enhance communication.
           </p>
 
-          <video autoplay controls muted>
+          <video controls>
             <source src="./img/video/shelter.mp4" type="video/mp4" />
           </video>
 
@@ -374,11 +397,12 @@
   </body>
 
   <script>
-    function showImg2() {
-      var img2 = document.querySelector(".img2");
-      img2.style.display = "block";
-    }
-
+ function showImg2() {
+    // Check if the window width is greater than 100px
+    if (window.innerWidth > 1000) {
+        var img2 = document.querySelector(".img2");
+        img2.style.display = "block";
+    }}
     function hideImg2() {
       var img2 = document.querySelector(".img2");
       img2.style.display = "none";

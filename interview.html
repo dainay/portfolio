@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daria Iarovaia - Interview</title>
-    <link rel="stylesheet" href="./scroll.css">
+    <link rel="stylesheet" href="./scroll.css" />
+    <link rel="stylesheet" href="./mobile-projects.css" />
     <style>
       *,
       *:before,
@@ -186,59 +187,93 @@
         border-radius: 25px;
         color: var(--black);
       }
-      
+
       .img {
         width: 33vw;
-        border-radius: 10px;
+        border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.51);
       }
 
-      .img1 {
-      
+      @media (max-width: 1000px) {
+
+        .photo-wrapper1 {
+          height: 79vw !important;
+        }
+
+        .img {
+          width: 44vw;
+          left: -2vw !important;
+        }
+
+        .img2 {
+       
+       
+        left: 37vw !important;
      
+      }
+      .img3 {
+       
+        top: 33vw !important;
+        left: 1vw !important;
+       
+      }
+
+
+      .img4 {
+        
+        top: 34vw !important;
+        left: 38vw !important;
+       
+      }
+
+      #desc {
+        top: 28vw !important;
+        font-size: 1.4rem !important;
+      }
+
+      }
+
+      .img1 {
         position: relative;
         margin-block: 2vw;
-       top: -3vw;
+        top: -3vw;
         z-index: 2;
-        transform: rotate(-4deg)
-    
+        transform: rotate(-4deg);
       }
 
       .img4 {
         position: absolute;
-  z-index: 0;
-  top: 24vw;
-  left: 28vw;
-  transform: rotate(-4deg);
+        z-index: 0;
+        top: 24vw;
+        left: 28vw;
+        transform: rotate(-4deg);
       }
 
-     
-.img3 {
-  position: absolute;
-  z-index: 1;
-  top: 26vw;
-  left: 1vw;
-  transform: rotate(4deg);
-}
-
+      .img3 {
+        position: absolute;
+        z-index: 1;
+        top: 26vw;
+        left: 1vw;
+        transform: rotate(4deg);
+      }
 
       .img2 {
         position: absolute;
-       
+
         border-radius: 10px;
         z-index: 1;
         top: 4vw;
         left: 25vw;
         transform: rotate(6deg);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
-      } 
+      }
 
-     .card {
-      box-shadow: 0 0 9px rgba(0, 0, 0, 0.71);
-      position: absolute;
-      z-index: 3;
-      width: 9vw;
-     }
+      .card {
+        box-shadow: 0 0 9px rgba(0, 0, 0, 0.71);
+        position: absolute;
+        z-index: 3;
+        width: 9vw;
+      }
 
       .photo-wrapper1 {
         position: relative;
@@ -249,98 +284,110 @@
         margin: auto;
       }
 
-     #desc {
-     font-family: curs;
-      position: relative;
-      top: 18vw;
-     font-variant: initial;
-     font-size: 1.6rem;
-     font-weight: 900;
-      color: var(--black);
-      text-align: center;
+      #desc {
+        font-family: curs;
+        position: relative;
+        top: 18vw;
+        font-variant: initial;
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: var(--black);
+        text-align: center;
+      }
 
-     }
- 
+      .prix {
+        font-family: big;
+        color: var(--gold);
+        text-align: center;
+      }
 
-    .prix {
-      font-family: big;
-      color: var(--gold);
-      text-align: center;
-    }
-      
-    #video {
-      display: block;
-      margin: auto;
-      margin-block: 50px;
-    }
+      #video {
+        display: block;
+        margin: auto;
+        margin-block: 50px;
+      }
+
+      iframe {
+        aspect-ratio: 16 / 9;
+      }
     </style>
   </head>
   <body>
     <main>
       <div class="top">
         <div class="name">
-          <h1>Interview </h1>
+          <h1>Interview</h1>
         </div>
 
         <div class="info">
-          <h2>Role</h2>
-          <p>
-            Conception, Filming, Light, Montage Video and Animation
-          </p>
+          <div>
+            <h2>Role</h2>
+            <p>Conception, Filming, Light, Sound, Montage Video and Animation</p>
+          </div>
 
-          <h2>Technologies</h2>
-          <p>
-            Premier Pro, After Effect
-          </p>
+          <div>
+            <h2>Technologies</h2>
+            <p>Premier Pro, After Effect</p>
+          </div>
 
-          <h2>Type</h2>
-          <p>Group Educational project</p>
+          <div>
+            <h2>Type</h2>
+            <p>Group Educational project</p>
+          </div>
 
-          <h2>Year</h2>
-          <p>2022-2022 November-December</p>
-
-          
+          <div>
+            <h2>Year</h2>
+            <p>2022 November-December</p>
+          </div>
         </div>
       </div>
 
       <div class="project">
         <div class="description">
-         <h2>Description</h2>
-        
+          <h2>Description</h2>
 
           <p>
-            During the first semester, our primary project involved conducting an interview with a theatre professional. For our promotional theme of the semester, we chose "theatre." Our group of 6 students was excited to interview the Public Communication Manager of the Montreux Theater.
-            
-           </p>
-
-
+            During the first semester, our primary project involved conducting
+            an interview with a theatre professional. For our year the theme
+            of the semester was "theatre." Our group of 6 students was
+            excited to interview the Public Communication Manager of the
+            Montreux Theater Lucie Robert.
+          </p>
 
           <div class="photo-wrapper1">
-           
-            <img class="img img1" src="./img/projects/inter1.jpg" alt="">
-            <img class="img img2" src="./img/projects/inter2.jpg" alt="">
-            <img class="img img3" src="./img/projects/inter3.jpg" alt="">
-            <img class="img img4" src="./img/projects/inter4.jpg" alt="">
-             
+            <img class="img img1" src="./img/projects/inter1.jpg" alt="" />
+            <img class="img img2" src="./img/projects/inter2.jpg" alt="" />
+            <img class="img img3" src="./img/projects/inter3.jpg" alt="" />
+            <img class="img img4" src="./img/projects/inter4.jpg" alt="" />
+
             <p id="desc">I took some photos during the set</p>
           </div>
 
           <p>
-            Our task was not only to prepare questions and find a professional in the field but also to set up our shooting location, arrange lighting, prepare the camera and sound equipment. Afterward, each group member was responsible for presenting their individual editing.
-           
+            Our task was not only to prepare questions and find a professional
+            in the field but also to set up our shooting location, arrange
+            lighting, prepare the camera and sound equipment. Afterward, each
+            group member was responsible for presenting their individual
+            editing.
           </p>
 
- 
-          <iframe id="video" width="840" height="472.5" src="https://www.youtube.com/embed/mO2kgLsJXPY?si=unx8jQo7I2IGVjcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe
+            id="video"
+            width="100%"
+             
+            src="https://www.youtube.com/embed/mO2kgLsJXPY?si=unx8jQo7I2IGVjcU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
 
-      <a class="button2" href="index.html"  
+      <a class="button2" href="index.html"
         >Retutn to main page <span></span><span></span><span></span
         ><span></span>
       </a>
     </main>
   </body>
-
- 
 </html>

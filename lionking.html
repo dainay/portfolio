@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UI Lion King</title>
+  <title>Daria Iarovaia - Lion King</title>
   <link rel="stylesheet" href="./scroll.css">
+  <link rel="stylesheet" href="./mobile-projects.css">
   <style>
     *,
     *:before,
@@ -103,11 +104,41 @@
 
     @media (max-width: 1500px) {
       .wrapper {
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center ;
       }
       .visual {
       top: 20px !important;
     }
+  }
+
+  @media (max-width: 1000px) {
+    div#comparison {
+  
+    width: 74vw !important;
+    
+   
+    }
+
+
+    div#comparison figure { 
+  background-image: url(img/projects/lionking4.jpg); 
+  background-size: contain;
+ background-repeat: no-repeat;
+  /* aspect-ratio: 1.45 !important; */
+
+}
+
+
+div#comparison figure div { 
+  background-image: url(./img/projects/lionking1.jpg);
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  top: 0;
+  height: 58.9vw !important;
+ 
+}
   }
 
     .project>h2 {
@@ -234,26 +265,29 @@
 
 
     div#comparison { 
-      border-radius: 15px;
+      border-radius: 10px;
   width: 800px;
   height: 550px;
   max-width: 700px;
-  overflow: hidden; }
+  overflow: hidden; 
+margin: auto;}
+  
 div#comparison figure { 
-  background-image: url(img/projects/lionking1.jpg); 
-  background-size: cover;
+  background-image: url(img/projects/lionking4.jpg); 
+  background-size: contain;
   position: relative;
   font-size: 0;
   width: 100%; 
   height: 100%;
   margin: 0; 
+  aspect-ratio: 1.45 !important;
 }
 div#comparison figure > img { 
   position: relative;
   width: 100%;
 }
 div#comparison figure div { 
-  background-image: url(./img/projects/lionking4.jpg);
+  background-image: url(./img/projects/lionking1.jpg);
   background-size: cover;
   position: absolute;
   width: 50%; 
@@ -261,6 +295,7 @@ div#comparison figure div {
   overflow: hidden;
   bottom: 0;
   height: 100%;
+  aspect-ratio: 1.45 !important;
 }
 
 input[type=range]{
@@ -308,7 +343,13 @@ input[type=range]:focus::-webkit-slider-thumb {
    cursor: grabbing;
    }
  
-
+.add {
+  font-family: curs;
+  font-variant: normal;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+}
   </style>
 </head>
 
@@ -320,17 +361,25 @@ input[type=range]:focus::-webkit-slider-thumb {
       </div>
 
       <div class="info">
-        <h2>Role</h2>
-        <p>Conception, Design, UI</p>
+        <div>
+          <h2>Role</h2>
+          <p>Conception, Design, UI</p>
+        </div>
 
-        <h2>Technologies</h2>
-        <p>Photoshop, Figma</p>
+        <div>
+          <h2>Technologies</h2>
+          <p> Figma, Photoshop</p>
+        </div>
 
-        <h2>Type</h2>
-          <p>Educational project</p>
+        <div>
+          <h2>Type</h2>
+            <p>Educational project</p>
+        </div>
 
-        <h2>Year</h2>
-        <p>2022 April</p>
+        <div>
+          <h2>Year</h2>
+          <p>2023 April</p>
+        </div>
       </div>
     </div>
 
@@ -343,9 +392,9 @@ input[type=range]:focus::-webkit-slider-thumb {
       <div class="wrapper">
         <div class="description">
 
-          <p>The main goal of this assignment was to redesign a well-known website in such a way as to replace the graphical universe of the site with a completely opposite one. For this task, we initially recreated the layout of the current website in Figma, then analyzed its UI. Afterward, we were required to propose a mood board suggesting a design that would have no connections with the original version.</p>
+          <p>The main goal of this task was to redesign a well-known website in such a way as to replace the graphical universe of the site with a completely opposite one. For this task, we initially recreated the layout of the current website in Figma, then analyzed its UI. Afterward, we were required to propose a mood board suggesting a design that would have no connections with the original version.</p>
 
-          <p>For this assignment, I chose the website of the musical "The Lion King," which I love. The universe of the old website is very strict, limited to three colors, and characterized by strict lines, which I replaced with color and shapeless patterns.</p>
+          <p>For this project, I chose the website of the musical "The Lion King," which I love. The universe of the old website is very strict, limited to three colors, and characterized by  lines and figures, which all I replaced with color and shapeless patterns.</p>
          
         </div>
         <div class="visual">
@@ -359,7 +408,7 @@ input[type=range]:focus::-webkit-slider-thumb {
           </div>
           
         
-        
+        <p class="add"> Drag the slider</p>
         </div>
 
 

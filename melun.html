@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daria Iarovaia - Tourist Campaign</title>
     <link rel="stylesheet" href="./scroll.css" />
+    <link rel="stylesheet" href="./mobile-projects.css" />
     <style>
       *,
       *:before,
@@ -206,14 +207,52 @@
       }
 
       .photo-wrapper2 {
-        border-radius: 5px;
-        width: 35.1vw;
-        margin: auto;
+        margin-block-end: 50px;
+        
+        position: relative;
+      }
+
+      @media (max-width: 1000px) {
+        .mini-site {
+        height: 42.2vw !important;
+       
+        width: 57.1vw !important;
+       
+      }
+      .img3 {
+        width: 60vw !important;
+        top: -3.5vw !important;
+      }
+
+      .button {
+       
+        padding: 0 !important;
+        width: 400px;
+        padding-block: 10px !important;
+     
+        margin: 60px auto;
+      }
+
+      }
+
+      @media (max-width: 500px) {
+      .button {
+       
+       
+       width: 200px !important;
+      padding-block: 10px !important;
+     font-size: 1rem !important;
+     }
+    }
+
+
+      .mini-site {
         height: 26vw;
         overflow-y: scroll;
-        margin-block-end: 50px;
+        width: 35.1vw;
+        margin: auto;
+        border-radius: 5px;
         cursor: url("./img/icons/scroll.svg"), auto;
-     
       }
 
       .img2 {
@@ -228,9 +267,9 @@
         z-index: 1;
         left: 50%;
         transform: translate(-50%, 0);
-         filter: drop-shadow(5px 5px 5px #1f1f1f52);
-      
-      top: 56.8vw;
+        filter: drop-shadow(5px 5px 5px #1f1f1f52);
+
+        top: -2.2vw;
       }
 
       .logo {
@@ -239,6 +278,15 @@
         margin: auto;
         margin-bottom: 50px;
       }
+
+      .desc {
+        text-align: center;
+        font-family: curs;
+        font-weight: 700;
+        font-size: 1.2rem;
+
+font-variant: normal;
+margin-bottom: 6vw;      }
     </style>
   </head>
   <body>
@@ -252,17 +300,24 @@
         </div>
 
         <div class="info">
-          <h2>Role</h2>
-          <p>Graphic Design, UI, Branding</p>
+          <div>
+            <h2>Role</h2>
+            <p>Graphic Design, UI, Branding</p>
+          </div>
 
-          <h2>Technologies</h2>
-          <p>Photoshop, Illustrator, Figma</p>
+          <div>
+            <h2>Technologies</h2>
+            <p>Photoshop, Illustrator, Figma</p>
+          </div>
+          <div>
+            <h2>Type</h2>
+            <p>Group Educational project</p>
+          </div>
 
-          <h2>Type</h2>
-          <p>Group Educational project</p>
-
-          <h2>Year</h2>
-          <p>2023 September-October</p>
+          <div>
+            <h2>Year</h2>
+            <p>2023 September-October</p>
+          </div>
         </div>
       </div>
 
@@ -310,10 +365,10 @@
           </div>
           <p>
             As part of this project, we were tasked with creating an advertising
-            campaign for one of the cities where one of the two students of the
+            campaign for one of the cities where one of the two students of the woorking
             group resides. To showcase the city, we needed to develop a poster,
             advertising banners, and a layout for a responsive website (desktop,
-            tablet, and phone) based on the mood board. Also our misson was to
+            tablet, and phone) based on a mood board. Also our misson was to
             create potentially interactive map of this plase which we could
             place on our site.
           </p>
@@ -334,15 +389,22 @@
             posters, each featuring one letter from the city's name, along with
             mockups. Additionally, I proposed a new logo for the city.
           </p>
-          <p style="margin-bottom: 50px;">
+          <p style="margin-bottom: 50px">
             Following this, we prepared a layout for a potential website that
             reflected our advertising campaign.
           </p>
 
           <div class="photo-wrapper2">
-            <img class="img2" src="./img/projects/melun3.jpg" alt="" />
+            <div class="mini-site">
+              <img class="img2" src="./img/projects/melun3.jpg" alt="" />
+            </div>
+
+            
+
             <img class="img3" src="./img/projects/tablette.png" alt="" />
           </div>
+
+<p class="desc">Scroll to see the layout </p>
 
           <p>
             For representation the brand's visual identity, I created a brand
